@@ -7229,6 +7229,50 @@ const Coins = createLucideIcon("Coins", [
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
+const Compass = createLucideIcon("Compass", [
+  [
+    "path",
+    {
+      d: "m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z",
+      key: "9ktpf1"
+    }
+  ],
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }]
+]);
+/**
+ * @license lucide-react v0.460.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const CornerDownRight = createLucideIcon("CornerDownRight", [
+  ["polyline", { points: "15 10 20 15 15 20", key: "1q7qjw" }],
+  ["path", { d: "M4 4v7a4 4 0 0 0 4 4h12", key: "z08zvw" }]
+]);
+/**
+ * @license lucide-react v0.460.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const Cpu = createLucideIcon("Cpu", [
+  ["rect", { width: "16", height: "16", x: "4", y: "4", rx: "2", key: "14l7u7" }],
+  ["rect", { width: "6", height: "6", x: "9", y: "9", rx: "1", key: "5aljv4" }],
+  ["path", { d: "M15 2v2", key: "13l42r" }],
+  ["path", { d: "M15 20v2", key: "15mkzm" }],
+  ["path", { d: "M2 15h2", key: "1gxd5l" }],
+  ["path", { d: "M2 9h2", key: "1bbxkp" }],
+  ["path", { d: "M20 15h2", key: "19e6y8" }],
+  ["path", { d: "M20 9h2", key: "19tzq7" }],
+  ["path", { d: "M9 2v2", key: "165o2o" }],
+  ["path", { d: "M9 20v2", key: "i2bqo8" }]
+]);
+/**
+ * @license lucide-react v0.460.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
 const DollarSign = createLucideIcon("DollarSign", [
   ["line", { x1: "12", x2: "12", y1: "2", y2: "22", key: "7eqyqh" }],
   ["path", { d: "M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6", key: "1b0p4s" }]
@@ -7584,6 +7628,19 @@ const Save = createLucideIcon("Save", [
   ],
   ["path", { d: "M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7", key: "1ydtos" }],
   ["path", { d: "M7 3v4a1 1 0 0 0 1 1h7", key: "t51u73" }]
+]);
+/**
+ * @license lucide-react v0.460.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const Scissors = createLucideIcon("Scissors", [
+  ["circle", { cx: "6", cy: "6", r: "3", key: "1lh9wr" }],
+  ["path", { d: "M8.12 8.12 12 12", key: "1alkpv" }],
+  ["path", { d: "M20 4 8.12 15.88", key: "xgtan2" }],
+  ["circle", { cx: "6", cy: "18", r: "3", key: "fqmcym" }],
+  ["path", { d: "M14.8 14.8 20 20", key: "ptml3r" }]
 ]);
 /**
  * @license lucide-react v0.460.0 - ISC
@@ -8306,18 +8363,44 @@ const STORE_CATALOG = [
     unit: "pack",
     quantityPerBuy: 5,
     iconName: "Cable"
+  },
+  {
+    id: "item-cable-power-ac",
+    brand: "Schneider Electric",
+    model: "Heavy Duty C13-Schuko 220V 1.8M",
+    name: "Kabel Daya Listrik AC 220V (Isi 3 Pcs)",
+    hardwareClass: "entry",
+    category: "cables_accessories",
+    description: "Kabel daya AC tebal standar server Schuko ke C13 16A dengan pelindung grounding tahan panas untuk menyuplai daya dari stop kontak PLN / PDU ke perangkat.",
+    cost: 25,
+    unit: "pack",
+    quantityPerBuy: 3,
+    iconName: "Zap"
+  },
+  {
+    id: "item-cable-lan-cat6",
+    brand: "Belden",
+    model: "DataTwist Cat6 UTP RJ45 Patch 3M",
+    name: "Kabel LAN UTP Cat6 RJ45 (Isi 3 Pcs)",
+    hardwareClass: "entry",
+    category: "cables_accessories",
+    description: "Kabel jaringan Ethernet Cat6 Gigabit berkecepatan 1000 Mbps untuk menghubungkan modem upstream ISP ke WAN router atau koneksi LAN NOC.",
+    cost: 30,
+    unit: "pack",
+    quantityPerBuy: 3,
+    iconName: "Cable"
   }
 ];
 const INITIAL_MAP_BUILDINGS = [
   {
     id: "bldg-lot-a",
-    name: "Ruko Sentra Blok A (Bisa Disewa)",
+    name: "Ruko Sentra Blok A (Kantor NOC)",
     type: "empty_lot",
     x: 80,
     y: 80,
     width: 140,
     height: 110,
-    isLeasedByPlayer: false,
+    isLeasedByPlayer: true,
     monthlyRent: 350,
     hasRackRoom: true
   },
@@ -8767,6 +8850,235 @@ const INITIAL_PLANS = [
     unlocked: true
   }
 ];
+const INITIAL_STARTER_DEVICES = [
+  {
+    id: "dev-router-mikrotik",
+    brand: "MikroTik",
+    model: "CCR2004-1G-12S+2XS",
+    name: "Core Router CCR2004 10G",
+    type: "core_router",
+    uSlot: 38,
+    uHeight: 1,
+    maxThroughputMbps: 1e4,
+    powerWatts: 45,
+    isPowered: true,
+    healthPct: 100,
+    ports: [
+      { id: "pwr-1", name: "PWR 220V", type: "power_ac", isInput: true },
+      { id: "wan-1", name: "WAN (ether1)", type: "copper_rj45", isInput: true },
+      { id: "lan-1", name: "LAN (ether2)", type: "copper_rj45", isInput: false },
+      { id: "sfp-1", name: "SFP+ 10G (sfp1)", type: "fiber_sfp", isInput: false },
+      { id: "sfp-2", name: "SFP+ 10G (sfp2)", type: "fiber_sfp", isInput: false }
+    ]
+  },
+  {
+    id: "dev-olt-zte",
+    brand: "ZTE",
+    model: "ZXA10 C320 Mini-OLT",
+    name: "GPON OLT ZTE C320",
+    type: "gpon_olt",
+    uSlot: 35,
+    uHeight: 2,
+    maxThroughputMbps: 2500,
+    powerWatts: 75,
+    isPowered: true,
+    healthPct: 100,
+    ports: [
+      { id: "pwr-1", name: "PWR 220V", type: "power_ac", isInput: true },
+      { id: "uplink-1", name: "UPLINK 10G (XG1)", type: "fiber_sfp", isInput: true },
+      { id: "pon-1", name: "PON 1 (Class C+)", type: "fiber_pon", isInput: false },
+      { id: "pon-2", name: "PON 2 (Class C+)", type: "fiber_pon", isInput: false },
+      { id: "pon-3", name: "PON 3 (Class C+)", type: "fiber_pon", isInput: false },
+      { id: "pon-4", name: "PON 4 (Class C+)", type: "fiber_pon", isInput: false }
+    ]
+  },
+  {
+    id: "dev-odf-panduit",
+    brand: "Panduit",
+    model: "Opti-Core 1U 24-Port SC/UPC",
+    name: "ODF Patch Panel 24-Port",
+    type: "odf_patch_panel",
+    uSlot: 40,
+    uHeight: 1,
+    maxThroughputMbps: 1e4,
+    powerWatts: 0,
+    isPowered: true,
+    healthPct: 100,
+    ports: [
+      { id: "sc-1", name: "ODF Core 1", type: "fiber_sc", isInput: true },
+      { id: "sc-2", name: "ODF Core 2", type: "fiber_sc", isInput: true }
+    ]
+  },
+  {
+    id: "dev-ups-apc",
+    brand: "APC by Schneider",
+    model: "Smart-UPS RT 3000VA 2U",
+    name: "UPS 3000VA On-Line (2U)",
+    type: "ups_battery",
+    uSlot: 32,
+    uHeight: 2,
+    maxThroughputMbps: 1e4,
+    powerWatts: 30,
+    isPowered: true,
+    healthPct: 100,
+    ports: [
+      { id: "pwr-in", name: "AC IN", type: "power_ac", isInput: true },
+      { id: "out-1", name: "OUT 1", type: "power_ac", isInput: false },
+      { id: "out-2", name: "OUT 2", type: "power_ac", isInput: false }
+    ]
+  }
+];
+const INITIAL_SERVER_BUILDING = {
+  plnBreaker: {
+    id: "pln-main-mcb",
+    name: "Panel MCB PLN 5500VA",
+    isMcbOn: true,
+    voltage: 220,
+    sockets: [
+      { id: "socket-wall-desk", name: "Stop Kontak Meja (220V)", type: "power_ac" },
+      { id: "socket-wall-rack", name: "Stop Kontak Rak (220V)", type: "power_ac" }
+    ]
+  },
+  upstreamModem: {
+    id: "modem-isp-upstream",
+    brand: "ZTE",
+    model: "ZXHN F609 GPON ONT",
+    name: "Modem ONT GPON ISP Induk",
+    ispProviderName: "Telkom Wholesale / IndiHome Metro-E",
+    isPowered: true,
+    hasPonLight: true,
+    throughputMbps: 1e3,
+    ipAddress: "103.144.20.1/29",
+    ports: [
+      { id: "modem-pwr", name: "DC 12V In", type: "power_dc" },
+      { id: "modem-pon", name: "PON Optical In", type: "fiber_pon" },
+      { id: "modem-lan1", name: "LAN 1 (GE 1G)", type: "copper_rj45" },
+      { id: "modem-lan2", name: "LAN 2 (GE 1G)", type: "copper_rj45" },
+      { id: "modem-lan3", name: "LAN 3 (GE 1G)", type: "copper_rj45" },
+      { id: "modem-lan4", name: "LAN 4 (GE 1G)", type: "copper_rj45" }
+    ]
+  },
+  odfPassthrough: {
+    id: "odf-wall-passthrough",
+    name: "ODF Wall Passthrough (Kabel Keluar ke Peta Kota)",
+    ports: [
+      { id: "wall-feeder-1", name: "Core 1 (Out to City Poles)", type: "fiber_sc", leadsToCityFeeder: true },
+      { id: "wall-feeder-2", name: "Core 2 (Out to City Poles)", type: "fiber_sc", leadsToCityFeeder: true },
+      { id: "wall-feeder-3", name: "Core 3 (Backup)", type: "fiber_sc", leadsToCityFeeder: false },
+      { id: "wall-feeder-4", name: "Core 4 (Backup)", type: "fiber_sc", leadsToCityFeeder: false }
+    ]
+  },
+  roomCables: [
+    {
+      id: "cable-pwr-modem",
+      type: "power",
+      from: { type: "pln_socket", portId: "socket-wall-desk", label: "Stop Kontak Meja" },
+      to: { type: "upstream_modem", portId: "modem-pwr", label: "Modem ISP (DC 12V)" },
+      color: "#10b981",
+      isActive: true,
+      points: [
+        { x: 190, y: 137 },
+        { x: 100, y: 137 },
+        { x: 100, y: 342 },
+        { x: 135, y: 342 }
+      ]
+    },
+    {
+      id: "cable-pwr-router",
+      type: "power",
+      from: { type: "pln_socket", portId: "socket-wall-rack", label: "Stop Kontak Rak" },
+      to: { type: "rack_device", deviceId: "dev-router-mikrotik", portId: "pwr-1", label: "MikroTik CCR2004 (PWR)" },
+      color: "#10b981",
+      isActive: true,
+      points: [
+        { x: 190, y: 167 },
+        { x: 420, y: 167 },
+        { x: 420, y: 110 },
+        { x: 632, y: 110 },
+        { x: 632, y: 221 }
+      ]
+    },
+    {
+      id: "cable-pwr-olt",
+      type: "power",
+      from: { type: "pln_socket", portId: "socket-wall-rack", label: "Stop Kontak Rak" },
+      to: { type: "rack_device", deviceId: "dev-olt-zte", portId: "pwr-1", label: "ZTE C320 OLT (PWR)" },
+      color: "#10b981",
+      isActive: true,
+      points: [
+        { x: 190, y: 167 },
+        { x: 440, y: 167 },
+        { x: 440, y: 110 },
+        { x: 620, y: 110 },
+        { x: 620, y: 303 },
+        { x: 632, y: 303 }
+      ]
+    },
+    {
+      id: "cable-lan-modem-router",
+      type: "lan",
+      from: { type: "upstream_modem", portId: "modem-lan1", label: "Modem ISP (LAN 1)" },
+      to: { type: "rack_device", deviceId: "dev-router-mikrotik", portId: "wan-1", label: "Core Router (WAN)" },
+      color: "#3b82f6",
+      isActive: true,
+      points: [
+        { x: 202, y: 342 },
+        { x: 202, y: 250 },
+        { x: 230, y: 250 },
+        { x: 230, y: 82 },
+        { x: 695, y: 82 },
+        { x: 695, y: 221 }
+      ]
+    },
+    {
+      id: "cable-fiber-router-olt",
+      type: "fiber",
+      from: { type: "rack_device", deviceId: "dev-router-mikrotik", portId: "sfp-1", label: "Core Router (SFP+)" },
+      to: { type: "rack_device", deviceId: "dev-olt-zte", portId: "uplink-1", label: "ZTE OLT (Uplink)" },
+      color: "#f59e0b",
+      isActive: true,
+      points: [
+        { x: 765, y: 221 },
+        { x: 800, y: 221 },
+        { x: 800, y: 303 },
+        { x: 695, y: 303 }
+      ]
+    },
+    {
+      id: "cable-fiber-olt-odf",
+      type: "fiber",
+      from: { type: "rack_device", deviceId: "dev-olt-zte", portId: "pon-1", label: "ZTE OLT (PON 1)" },
+      to: { type: "odf_wall", portId: "wall-feeder-1", label: "ODF Wall (Feeder Out)" },
+      color: "#eab308",
+      isActive: true,
+      points: [
+        { x: 765, y: 303 },
+        { x: 830, y: 303 },
+        { x: 830, y: 298 },
+        { x: 915, y: 298 }
+      ]
+    },
+    {
+      id: "cable-pwr-ups",
+      type: "power",
+      from: { type: "pln_socket", portId: "socket-wall-rack", label: "Stop Kontak Rak" },
+      to: { type: "rack_device", deviceId: "dev-ups-apc", portId: "pwr-in", label: "APC Smart-UPS (AC IN)" },
+      color: "#10b981",
+      isActive: true,
+      points: [
+        { x: 190, y: 167 },
+        { x: 450, y: 167 },
+        { x: 450, y: 110 },
+        { x: 610, y: 110 },
+        { x: 610, y: 375 },
+        { x: 632, y: 375 }
+      ]
+    }
+  ],
+  selectedCableTool: null,
+  selectedEndpoint: null,
+  subView: "building_room"
+};
 const useGameStore = create$1((set2, get2) => ({
   companyName: "Apex Fiber Networks",
   time: INITIAL_TIME,
@@ -8811,11 +9123,14 @@ const useGameStore = create$1((set2, get2) => ({
   },
   // Inventory (Realistic Mode)
   inventory: {
-    "item-pole-7m": 4,
+    "item-pole-7m": 6,
     "item-cable-dist-500m": 500,
     "item-cable-feeder-1000m": 1e3,
     "item-odc-48": 1,
-    "item-odp-8": 2
+    "item-odp-8": 2,
+    "item-cable-power-ac": 4,
+    "item-cable-lan-cat6": 4,
+    "item-patch-cord-fiber": 6
   },
   // 2D Map State
   mapToolMode: "select",
@@ -8827,13 +9142,14 @@ const useGameStore = create$1((set2, get2) => ({
   mapCables: [],
   cableStartPoint: null,
   inspectedMapObject: null,
-  // Physical Server Rack
+  // Physical Server Rack & Building
   serverRack: {
-    hasRack: false,
-    devices: [],
+    hasRack: true,
+    devices: INITIAL_STARTER_DEVICES,
     patchCables: []
   },
   selectedPortForPatching: null,
+  serverBuilding: INITIAL_SERVER_BUILDING,
   // Arcade Mode Topology
   nodes: INITIAL_NODES,
   edges: INITIAL_EDGES,
@@ -9096,13 +9412,42 @@ const useGameStore = create$1((set2, get2) => ({
       return;
     }
     sound.playDeploy();
-    const portCount = item.portCount || 4;
-    const ports = Array.from({ length: portCount }, (_, i) => ({
-      id: `p-${i + 1}`,
-      name: item.id === "item-upstream-gateway" ? i === 0 ? "FIBER-WAN" : `SFP+ ${i}` : item.id.includes("router") ? i < 2 ? `WAN${i + 1}` : `LAN${i - 1}` : item.id.includes("olt") ? i < 2 ? `UPLINK${i + 1}` : `PON${i - 1}` : `PORT${i + 1}`,
-      type: item.id.includes("olt") && i >= 2 ? "fiber_pon" : "fiber_sfp",
-      isInput: i === 0
-    }));
+    const ports = [
+      { id: "pwr-1", name: "PWR 220V", type: "power_ac", isInput: true }
+    ];
+    if (item.id.includes("router")) {
+      ports.push(
+        { id: "wan-1", name: "WAN (ether1)", type: "copper_rj45", isInput: true },
+        { id: "lan-1", name: "LAN (ether2)", type: "copper_rj45", isInput: false },
+        { id: "sfp-1", name: "SFP+ 10G (sfp1)", type: "fiber_sfp", isInput: false },
+        { id: "sfp-2", name: "SFP+ 10G (sfp2)", type: "fiber_sfp", isInput: false }
+      );
+    } else if (item.id.includes("olt")) {
+      ports.push(
+        { id: "uplink-1", name: "UPLINK 10G (XG1)", type: "fiber_sfp", isInput: true },
+        { id: "pon-1", name: "PON 1 (Class C+)", type: "fiber_pon", isInput: false },
+        { id: "pon-2", name: "PON 2 (Class C+)", type: "fiber_pon", isInput: false },
+        { id: "pon-3", name: "PON 3 (Class C+)", type: "fiber_pon", isInput: false },
+        { id: "pon-4", name: "PON 4 (Class C+)", type: "fiber_pon", isInput: false }
+      );
+    } else if (item.id.includes("ups")) {
+      ports.push(
+        { id: "out-1", name: "UPS OUT 1 (220V)", type: "power_ac", isInput: false },
+        { id: "out-2", name: "UPS OUT 2 (220V)", type: "power_ac", isInput: false }
+      );
+    } else if (item.id.includes("odf")) {
+      ports.push(
+        { id: "sc-1", name: "ODF Core 1", type: "fiber_sc", isInput: true },
+        { id: "sc-2", name: "ODF Core 2", type: "fiber_sc", isInput: true },
+        { id: "sc-3", name: "ODF Core 3", type: "fiber_sc", isInput: true },
+        { id: "sc-4", name: "ODF Core 4", type: "fiber_sc", isInput: true }
+      );
+    } else {
+      ports.push(
+        { id: "p-1", name: "PORT 1", type: "fiber_sfp", isInput: true },
+        { id: "p-2", name: "PORT 2", type: "fiber_sfp", isInput: false }
+      );
+    }
     const newDevice = {
       id: `dev-${item.id.replace("item-", "")}-${Date.now().toString().slice(-4)}`,
       brand: item.brand,
@@ -9141,6 +9486,12 @@ const useGameStore = create$1((set2, get2) => ({
         patchCables: state.serverRack.patchCables.filter(
           (c2) => c2.fromDeviceId !== deviceId && c2.toDeviceId !== deviceId
         )
+      },
+      serverBuilding: {
+        ...state.serverBuilding,
+        roomCables: state.serverBuilding.roomCables.filter(
+          (c2) => c2.from.deviceId !== deviceId && c2.to.deviceId !== deviceId
+        )
       }
     });
     state.addAlert(`Membongkar ${device.name} dari rak server.`, "info");
@@ -9155,6 +9506,143 @@ const useGameStore = create$1((set2, get2) => ({
         )
       }
     }));
+  },
+  // Server Building Actions
+  togglePlnMcb: () => {
+    sound.playClick();
+    const state = get2();
+    const newStatus = !state.serverBuilding.plnBreaker.isMcbOn;
+    set2({
+      serverBuilding: {
+        ...state.serverBuilding,
+        plnBreaker: {
+          ...state.serverBuilding.plnBreaker,
+          isMcbOn: newStatus
+        }
+      }
+    });
+    state.addAlert(
+      newStatus ? "⚡ Saklar MCB PLN 5500VA dinyalakan (ON) - Arus listrik 220V aktif!" : "⚠️ Saklar MCB PLN 5500VA dimatikan (OFF) - Perangkat kehilangan daya AC!",
+      newStatus ? "success" : "warning"
+    );
+  },
+  toggleModemPower: () => {
+    sound.playClick();
+    const state = get2();
+    const newStatus = !state.serverBuilding.upstreamModem.isPowered;
+    set2({
+      serverBuilding: {
+        ...state.serverBuilding,
+        upstreamModem: {
+          ...state.serverBuilding.upstreamModem,
+          isPowered: newStatus
+        }
+      }
+    });
+    state.addAlert(
+      newStatus ? "Modem ONT ISP Induk dinyalakan." : "Modem ONT ISP Induk dimatikan.",
+      newStatus ? "info" : "warning"
+    );
+  },
+  setServerBuildingSubView: (view) => {
+    sound.playClick();
+    set2((state) => ({
+      serverBuilding: {
+        ...state.serverBuilding,
+        subView: view
+      }
+    }));
+  },
+  setSelectedCableTool: (tool) => {
+    sound.playClick();
+    set2((state) => ({
+      serverBuilding: {
+        ...state.serverBuilding,
+        selectedCableTool: tool,
+        selectedEndpoint: null
+      }
+    }));
+  },
+  selectCableEndpoint: (endpoint) => {
+    sound.playClick();
+    set2((state) => ({
+      serverBuilding: {
+        ...state.serverBuilding,
+        selectedEndpoint: endpoint
+      }
+    }));
+  },
+  connectRoomCable: (from, to, type, points) => {
+    const state = get2();
+    if (from.type === to.type && from.deviceId === to.deviceId && from.portId === to.portId) {
+      return;
+    }
+    let invKey = "";
+    if (type === "power") invKey = "item-cable-power-ac";
+    if (type === "lan") invKey = "item-cable-lan-cat6";
+    if (type === "fiber") invKey = "item-patch-cord-fiber";
+    const available = state.inventory[invKey] || 0;
+    if (available <= 0) {
+      state.addAlert(`Kabel ${type.toUpperCase()} di gudang habis! Beli kabel di Toko Hardware terlebih dahulu.`, "warning");
+      return;
+    }
+    let color2 = "#3b82f6";
+    if (type === "power") color2 = "#10b981";
+    if (type === "fiber") color2 = "#f59e0b";
+    const newCable = {
+      id: `rcable-${type}-${Date.now().toString().slice(-5)}`,
+      type,
+      from,
+      to,
+      color: color2,
+      isActive: true,
+      points
+    };
+    sound.playConnect();
+    set2({
+      inventory: {
+        ...state.inventory,
+        [invKey]: available - 1
+      },
+      serverBuilding: {
+        ...state.serverBuilding,
+        roomCables: [...state.serverBuilding.roomCables, newCable],
+        selectedEndpoint: null
+      }
+    });
+    state.addAlert(`Menghubungkan kabel ${type.toUpperCase()} dari ${from.label} ke ${to.label}!`, "success");
+  },
+  updateRoomCablePoints: (cableId, points) => {
+    sound.playClick();
+    set2((state) => ({
+      serverBuilding: {
+        ...state.serverBuilding,
+        roomCables: state.serverBuilding.roomCables.map(
+          (c2) => c2.id === cableId ? { ...c2, points } : c2
+        )
+      }
+    }));
+  },
+  removeRoomCable: (cableId) => {
+    sound.playClick();
+    const state = get2();
+    const cable = state.serverBuilding.roomCables.find((c2) => c2.id === cableId);
+    if (!cable) return;
+    let invKey = "";
+    if (cable.type === "power") invKey = "item-cable-power-ac";
+    if (cable.type === "lan") invKey = "item-cable-lan-cat6";
+    if (cable.type === "fiber") invKey = "item-patch-cord-fiber";
+    set2({
+      inventory: {
+        ...state.inventory,
+        [invKey]: (state.inventory[invKey] || 0) + 1
+      },
+      serverBuilding: {
+        ...state.serverBuilding,
+        roomCables: state.serverBuilding.roomCables.filter((c2) => c2.id !== cableId)
+      }
+    });
+    state.addAlert(`Mencabut kabel dan mengembalikannya ke gudang inventaris.`, "info");
   },
   startPatchingCable: (deviceId, portId) => {
     sound.playClick();
@@ -9338,25 +9826,39 @@ const useGameStore = create$1((set2, get2) => ({
     tickCount += 1;
     const concurrencyMultiplier = getTimeOfDayMultiplier(hour, minute);
     if (state.gameMode === "realistic") {
+      const bldg = state.serverBuilding;
       const devices = state.serverRack.devices;
-      const patches = state.serverRack.patchCables;
-      const routerDev = devices.find((d2) => d2.type === "core_router" && d2.isPowered);
-      const oltDev = devices.find((d2) => d2.type === "gpon_olt" && d2.isPowered);
-      const odfDev = devices.find((d2) => d2.type === "odf_patch_panel");
-      let hasRackThroughput = false;
-      let coreCapacityMbps = 0;
-      if (routerDev && oltDev && odfDev) {
-        const routerToOlt = patches.some(
-          (p2) => p2.fromDeviceId === routerDev.id && p2.toDeviceId === oltDev.id || p2.fromDeviceId === oltDev.id && p2.toDeviceId === routerDev.id
-        );
-        const oltToOdf = patches.some(
-          (p2) => p2.fromDeviceId === oltDev.id && p2.toDeviceId === odfDev.id || p2.fromDeviceId === odfDev.id && p2.toDeviceId === oltDev.id
-        );
-        if (routerToOlt && oltToOdf) {
-          hasRackThroughput = true;
-          coreCapacityMbps = Math.min(routerDev.maxThroughputMbps, oltDev.maxThroughputMbps);
-        }
-      }
+      const roomCables = bldg.roomCables;
+      const isMcbOn = bldg.plnBreaker.isMcbOn;
+      const modemHasPowerCable = roomCables.some(
+        (c2) => c2.type === "power" && (c2.from.type === "upstream_modem" && c2.from.portId === "modem-pwr" && c2.to.type === "pln_socket" || c2.to.type === "upstream_modem" && c2.to.portId === "modem-pwr" && c2.from.type === "pln_socket")
+      );
+      const isModemOnline = isMcbOn && modemHasPowerCable && bldg.upstreamModem.isPowered;
+      const routerDev = devices.find((d2) => d2.type === "core_router");
+      const routerHasPowerCable = routerDev && roomCables.some(
+        (c2) => c2.type === "power" && (c2.from.type === "rack_device" && c2.from.deviceId === routerDev.id && c2.from.portId === "pwr-1" || c2.to.type === "rack_device" && c2.to.deviceId === routerDev.id && c2.to.portId === "pwr-1")
+      );
+      const isRouterOnline = isMcbOn && !!routerHasPowerCable && (routerDev ? routerDev.isPowered : false);
+      const isModemConnectedToRouter = isModemOnline && isRouterOnline && roomCables.some(
+        (c2) => c2.type === "lan" && (c2.from.type === "upstream_modem" && c2.to.type === "rack_device" && c2.to.deviceId === routerDev?.id || c2.to.type === "upstream_modem" && c2.from.type === "rack_device" && c2.from.deviceId === routerDev?.id)
+      );
+      const oltDev = devices.find((d2) => d2.type === "gpon_olt");
+      const oltHasPowerCable = oltDev && roomCables.some(
+        (c2) => c2.type === "power" && (c2.from.type === "rack_device" && c2.from.deviceId === oltDev.id && c2.from.portId === "pwr-1" || c2.to.type === "rack_device" && c2.to.deviceId === oltDev.id && c2.to.portId === "pwr-1")
+      );
+      const isOltOnline = isMcbOn && !!oltHasPowerCable && (oltDev ? oltDev.isPowered : false);
+      const isRouterConnectedToOlt = isRouterOnline && isOltOnline && (roomCables.some(
+        (c2) => c2.type === "fiber" && (c2.from.deviceId === routerDev?.id && c2.to.deviceId === oltDev?.id || c2.to.deviceId === routerDev?.id && c2.from.deviceId === oltDev?.id)
+      ) || state.serverRack.patchCables.some(
+        (p2) => p2.fromDeviceId === routerDev?.id && p2.toDeviceId === oltDev?.id || p2.fromDeviceId === oltDev?.id && p2.toDeviceId === routerDev?.id
+      ));
+      const isOltConnectedToOdfWall = isOltOnline && (roomCables.some(
+        (c2) => c2.type === "fiber" && (c2.from.deviceId === oltDev?.id && c2.to.type === "odf_wall" || c2.to.deviceId === oltDev?.id && c2.from.type === "odf_wall")
+      ) || state.serverRack.patchCables.some(
+        (p2) => p2.fromDeviceId === oltDev?.id && devices.find((d2) => d2.id === p2.toDeviceId)?.type === "odf_patch_panel" || p2.toDeviceId === oltDev?.id && devices.find((d2) => d2.id === p2.fromDeviceId)?.type === "odf_patch_panel"
+      ));
+      const hasRackThroughput = isModemConnectedToRouter && isRouterConnectedToOlt && isOltConnectedToOdfWall;
+      const coreCapacityMbps = hasRackThroughput ? Math.min(bldg.upstreamModem.throughputMbps, routerDev?.maxThroughputMbps || 0, oltDev?.maxThroughputMbps || 0) : 0;
       const leasedBldg = state.mapBuildings.find((b2) => b2.isLeasedByPlayer);
       let activeOdps = /* @__PURE__ */ new Set();
       const updatedCables = state.mapCables.map((cable) => {
@@ -9568,6 +10070,7 @@ const useGameStore = create$1((set2, get2) => ({
       mapOdps: state.mapOdps,
       mapCables: state.mapCables,
       serverRack: state.serverRack,
+      serverBuilding: state.serverBuilding,
       nodes: state.nodes,
       edges: state.edges,
       plans: state.plans,
@@ -9614,7 +10117,8 @@ const useGameStore = create$1((set2, get2) => ({
           mapOdcs: parsed.mapOdcs || [],
           mapOdps: parsed.mapOdps || [],
           mapCables: parsed.mapCables || [],
-          serverRack: parsed.serverRack || { hasRack: false, devices: [], patchCables: [] },
+          serverRack: parsed.serverRack || { hasRack: true, devices: INITIAL_STARTER_DEVICES, patchCables: [] },
+          serverBuilding: parsed.serverBuilding || INITIAL_SERVER_BUILDING,
           nodes: parsed.nodes || INITIAL_NODES,
           edges: parsed.edges || INITIAL_EDGES,
           plans: parsed.plans || INITIAL_PLANS,
@@ -9635,11 +10139,14 @@ const useGameStore = create$1((set2, get2) => ({
       time: INITIAL_TIME,
       finance: INITIAL_FINANCE,
       inventory: {
-        "item-pole-7m": 4,
+        "item-pole-7m": 6,
         "item-cable-dist-500m": 500,
         "item-cable-feeder-1000m": 1e3,
         "item-odc-48": 1,
-        "item-odp-8": 2
+        "item-odp-8": 2,
+        "item-cable-power-ac": 4,
+        "item-cable-lan-cat6": 4,
+        "item-patch-cord-fiber": 6
       },
       mapBuildings: INITIAL_MAP_BUILDINGS,
       mapHouses: INITIAL_MAP_HOUSES,
@@ -9647,7 +10154,8 @@ const useGameStore = create$1((set2, get2) => ({
       mapOdcs: [],
       mapOdps: [],
       mapCables: [],
-      serverRack: { hasRack: false, devices: [], patchCables: [] },
+      serverRack: { hasRack: true, devices: INITIAL_STARTER_DEVICES, patchCables: [] },
+      serverBuilding: INITIAL_SERVER_BUILDING,
       nodes: INITIAL_NODES,
       edges: INITIAL_EDGES,
       cableStartPoint: null,
@@ -10679,269 +11187,1571 @@ const CityMapView = () => {
 };
 const ServerRackView = () => {
   const serverRack = useGameStore((s2) => s2.serverRack);
-  const serverRoomViewMode = useGameStore((s2) => s2.serverRoomViewMode);
-  const setServerRoomViewMode = useGameStore((s2) => s2.setServerRoomViewMode);
-  const selectedPortForPatching = useGameStore((s2) => s2.selectedPortForPatching);
-  const startPatchingCable = useGameStore((s2) => s2.startPatchingCable);
-  const connectPatchCable = useGameStore((s2) => s2.connectPatchCable);
-  const removePatchCable = useGameStore((s2) => s2.removePatchCable);
+  const serverBuilding = useGameStore((s2) => s2.serverBuilding);
+  useGameStore((s2) => s2.serverRoomViewMode);
+  useGameStore((s2) => s2.setServerRoomViewMode);
+  const inventory = useGameStore((s2) => s2.inventory);
+  const mapBuildings = useGameStore((s2) => s2.mapBuildings);
+  const setActiveTab = useGameStore((s2) => s2.setActiveTab);
+  const togglePlnMcb = useGameStore((s2) => s2.togglePlnMcb);
+  useGameStore((s2) => s2.toggleModemPower);
+  const setServerBuildingSubView = useGameStore((s2) => s2.setServerBuildingSubView);
+  const setSelectedCableTool = useGameStore((s2) => s2.setSelectedCableTool);
+  const selectCableEndpoint = useGameStore((s2) => s2.selectCableEndpoint);
+  const connectRoomCable = useGameStore((s2) => s2.connectRoomCable);
+  const removeRoomCable = useGameStore((s2) => s2.removeRoomCable);
+  const updateRoomCablePoints = useGameStore((s2) => s2.updateRoomCablePoints);
   const toggleDevicePower = useGameStore((s2) => s2.toggleDevicePower);
   const unmountRackDevice = useGameStore((s2) => s2.unmountRackDevice);
   const mountRackDevice = useGameStore((s2) => s2.mountRackDevice);
-  const inventory = useGameStore((s2) => s2.inventory);
+  const [drawingWaypoints, setDrawingWaypoints] = reactExports.useState([]);
+  const [cursorPos, setCursorPos] = reactExports.useState(null);
+  const [isOrthoLock, setIsOrthoLock] = reactExports.useState(true);
+  const [redrawingCableId, setRedrawingCableId] = reactExports.useState(null);
+  const svgRef = reactExports.useRef(null);
   const [selectedSlotForMounting, setSelectedSlotForMounting] = reactExports.useState(null);
+  const leasedBuilding = mapBuildings.find((b2) => b2.isLeasedByPlayer);
+  const subView = serverBuilding.subView;
+  const selectedTool = serverBuilding.selectedCableTool;
+  const selectedEndpoint = serverBuilding.selectedEndpoint;
+  const powerStock = inventory["item-cable-power-ac"] || 0;
+  const lanStock = inventory["item-cable-lan-cat6"] || 0;
+  const fiberStock = inventory["item-patch-cord-fiber"] || 0;
   const mountableCatalog = STORE_CATALOG.filter(
     (item) => item.category === "rack_hardware" && item.rackHeightU && item.rackHeightU <= 6
   );
-  const handlePortClick = (deviceId, portId) => {
-    if (!selectedPortForPatching) {
-      startPatchingCable(deviceId, portId);
+  const isMcbOn = serverBuilding.plnBreaker.isMcbOn;
+  const roomCables = serverBuilding.roomCables;
+  const modemPowerCable = roomCables.find(
+    (c2) => c2.type === "power" && (c2.from.type === "upstream_modem" && c2.from.portId === "modem-pwr" || c2.to.type === "upstream_modem" && c2.to.portId === "modem-pwr")
+  );
+  const isModemPowered = isMcbOn && !!modemPowerCable && serverBuilding.upstreamModem.isPowered;
+  const routerDev = serverRack.devices.find((d2) => d2.type === "core_router");
+  const routerPowerCable = routerDev && roomCables.find(
+    (c2) => c2.type === "power" && (c2.from.deviceId === routerDev.id && c2.from.portId === "pwr-1" || c2.to.deviceId === routerDev.id && c2.to.portId === "pwr-1")
+  );
+  const isRouterPowered = isMcbOn && !!routerPowerCable && (routerDev ? routerDev.isPowered : false);
+  const isModemConnectedToRouter = isModemPowered && isRouterPowered && roomCables.some(
+    (c2) => c2.type === "lan" && (c2.from.type === "upstream_modem" && c2.to.deviceId === routerDev?.id || c2.to.type === "upstream_modem" && c2.from.deviceId === routerDev?.id)
+  );
+  const oltDev = serverRack.devices.find((d2) => d2.type === "gpon_olt");
+  const oltPowerCable = oltDev && roomCables.find(
+    (c2) => c2.type === "power" && (c2.from.deviceId === oltDev.id && c2.from.portId === "pwr-1" || c2.to.deviceId === oltDev.id && c2.to.portId === "pwr-1")
+  );
+  const isOltPowered = isMcbOn && !!oltPowerCable && (oltDev ? oltDev.isPowered : false);
+  const isRouterConnectedToOlt = isRouterPowered && isOltPowered && (roomCables.some(
+    (c2) => c2.type === "fiber" && (c2.from.deviceId === routerDev?.id && c2.to.deviceId === oltDev?.id || c2.to.deviceId === routerDev?.id && c2.from.deviceId === oltDev?.id)
+  ) || serverRack.patchCables.some(
+    (p2) => p2.fromDeviceId === routerDev?.id && p2.toDeviceId === oltDev?.id || p2.fromDeviceId === oltDev?.id && p2.toDeviceId === routerDev?.id
+  ));
+  const isOltConnectedToOdfWall = isOltPowered && (roomCables.some(
+    (c2) => c2.type === "fiber" && (c2.from.deviceId === oltDev?.id && c2.to.type === "odf_wall" || c2.to.deviceId === oltDev?.id && c2.from.type === "odf_wall")
+  ) || serverRack.patchCables.some(
+    (p2) => p2.fromDeviceId === oltDev?.id && serverRack.devices.find((d2) => d2.id === p2.toDeviceId)?.type === "odf_patch_panel" || p2.toDeviceId === oltDev?.id && serverRack.devices.find((d2) => d2.id === p2.fromDeviceId)?.type === "odf_patch_panel"
+  ));
+  const isFullPipelineOnline = isModemConnectedToRouter && isRouterConnectedToOlt && isOltConnectedToOdfWall;
+  const rackDeviceLayout = React$2.useMemo(() => {
+    const sorted = [...serverRack.devices].sort((a2, b2) => b2.uSlot - a2.uSlot);
+    const map2 = {};
+    let curY = 42;
+    for (const dev of sorted) {
+      let devHeight = dev.uHeight === 1 ? dev.type === "odf_patch_panel" ? 38 : 50 : dev.uHeight === 2 ? 62 : 76;
+      let devRelY = curY;
+      if (dev.id === "dev-odf-panduit" || dev.type === "odf_patch_panel") {
+        devRelY = 42;
+        devHeight = 38;
+      } else if (dev.id === "dev-router-mikrotik" && dev.uSlot >= 36) {
+        devRelY = 88;
+        devHeight = 50;
+      } else if (dev.id === "dev-olt-zte" && dev.uSlot >= 33) {
+        devRelY = 160;
+        devHeight = 64;
+      } else if (dev.id === "dev-ups-apc" && dev.uSlot >= 30) {
+        devRelY = 236;
+        devHeight = 58;
+      }
+      const portCenterY = 110 + devRelY + Math.round(devHeight / 2);
+      const portBtnH = 22;
+      const portRelY = Math.round((devHeight - portBtnH) / 2);
+      const portMap = {};
+      const pwrPorts = dev.ports.filter(
+        (p2) => p2.type === "power_ac" || p2.id.includes("pwr")
+      );
+      const dataPorts = dev.ports.filter((p2) => !pwrPorts.includes(p2));
+      pwrPorts.forEach((p2, idx) => {
+        const absX = 632 + idx * 42;
+        const relX = absX - 470 - 20;
+        portMap[p2.id] = {
+          x: absX,
+          y: portCenterY,
+          relX: relX - 22,
+          relY: portRelY,
+          width: 44,
+          height: portBtnH
+        };
+      });
+      if (dev.type === "odf_patch_panel") {
+        dataPorts.forEach((p2, idx) => {
+          const absX = idx === 0 ? 672 : idx === 1 ? 747 : 747 + (idx - 1) * 45;
+          const relX = absX - 470 - 20;
+          portMap[p2.id] = {
+            x: absX,
+            y: portCenterY,
+            relX: relX - 30,
+            relY: portRelY,
+            width: 60,
+            height: portBtnH
+          };
+        });
+      } else {
+        dataPorts.forEach((p2, idx) => {
+          let absX = 695;
+          if (p2.id === "wan-1" || p2.id === "uplink-1" || p2.id === "out-1") {
+            absX = 695;
+          } else if (p2.id === "lan-1") {
+            absX = 730;
+          } else if (p2.id === "sfp-1" || p2.id === "pon-1" || p2.id === "out-2") {
+            absX = 765;
+          } else if (p2.id === "sfp-2" || p2.id === "pon-2") {
+            absX = 795;
+          } else {
+            absX = 695 + idx * 36;
+          }
+          const relX = absX - 470 - 20;
+          portMap[p2.id] = {
+            x: absX,
+            y: portCenterY,
+            relX: relX - 28,
+            relY: portRelY,
+            width: 56,
+            height: portBtnH
+          };
+        });
+      }
+      map2[dev.id] = {
+        device: dev,
+        relY: devRelY,
+        height: devHeight,
+        ports: portMap
+      };
+      curY = Math.max(curY + devHeight + 6, devRelY + devHeight + 6);
+    }
+    return map2;
+  }, [serverRack.devices]);
+  const getEndpointCoord = (ep) => {
+    if (ep.type === "pln_socket") {
+      if (ep.portId === "socket-wall-desk") return { x: 190, y: 137 };
+      if (ep.portId === "socket-wall-rack") return { x: 190, y: 167 };
+    }
+    if (ep.type === "upstream_modem") {
+      if (ep.portId === "modem-pwr") return { x: 135, y: 342 };
+      if (ep.portId === "modem-lan1") return { x: 202, y: 342 };
+      if (ep.portId === "modem-lan2") return { x: 297, y: 342 };
+    }
+    if (ep.type === "rack_device") {
+      if (ep.deviceId && rackDeviceLayout[ep.deviceId]?.ports[ep.portId]) {
+        const pt = rackDeviceLayout[ep.deviceId].ports[ep.portId];
+        return { x: pt.x, y: pt.y };
+      }
+      const matchedDev = serverRack.devices.find(
+        (d2) => d2.id === ep.deviceId || d2.ports.some((p2) => p2.id === ep.portId)
+      );
+      if (matchedDev && rackDeviceLayout[matchedDev.id]?.ports[ep.portId]) {
+        const pt = rackDeviceLayout[matchedDev.id].ports[ep.portId];
+        return { x: pt.x, y: pt.y };
+      }
+      if (ep.portId === "pwr-1" && ep.deviceId?.includes("router")) return { x: 632, y: 221 };
+      if (ep.portId === "pwr-1" && ep.deviceId?.includes("olt")) return { x: 632, y: 303 };
+      if (ep.portId === "pwr-in") return { x: 632, y: 375 };
+      if (ep.portId === "wan-1") return { x: 695, y: 221 };
+      if (ep.portId === "lan-1") return { x: 730, y: 221 };
+      if (ep.portId === "sfp-1") return { x: 765, y: 221 };
+      if (ep.portId === "sfp-2") return { x: 795, y: 221 };
+      if (ep.portId === "uplink-1") return { x: 695, y: 303 };
+      if (ep.portId === "pon-1") return { x: 765, y: 303 };
+      if (ep.portId === "sc-1") return { x: 672, y: 170 };
+      if (ep.portId === "sc-2") return { x: 747, y: 170 };
+    }
+    if (ep.type === "odf_wall") {
+      if (ep.portId === "wall-feeder-1") return { x: 915, y: 298 };
+      if (ep.portId === "wall-feeder-2") return { x: 915, y: 333 };
+    }
+    return { x: 500, y: 300 };
+  };
+  const generateDefaultOrthogonalPoints = (p1, p2, type) => {
+    if (type === "lan") {
+      return [
+        p1,
+        { x: p1.x, y: 260 },
+        { x: 230, y: 260 },
+        { x: 230, y: 82 },
+        { x: p2.x, y: 82 },
+        p2
+      ];
+    }
+    if (type === "power") {
+      return [
+        p1,
+        { x: p1.x + 30, y: p1.y },
+        { x: p1.x + 30, y: 110 },
+        { x: p2.x, y: 110 },
+        p2
+      ];
+    }
+    if (p2.x > 850) {
+      return [
+        p1,
+        { x: 825, y: p1.y },
+        { x: 825, y: p2.y },
+        p2
+      ];
+    }
+    return [
+      p1,
+      { x: 810, y: p1.y },
+      { x: 810, y: p2.y },
+      p2
+    ];
+  };
+  const buildPathD = (points) => {
+    if (!points || points.length === 0) return "";
+    return points.reduce((acc, pt, i) => `${acc} ${i === 0 ? "M" : "L"} ${pt.x} ${pt.y}`, "");
+  };
+  const currentAnchorPoint = selectedEndpoint ? drawingWaypoints.length > 0 ? drawingWaypoints[drawingWaypoints.length - 1] : getEndpointCoord(selectedEndpoint) : null;
+  const handleSvgMouseMove = (e3) => {
+    if (!svgRef.current) return;
+    const rect = svgRef.current.getBoundingClientRect();
+    const rawX = Math.round((e3.clientX - rect.left) / rect.width * 1100);
+    const rawY = Math.round((e3.clientY - rect.top) / rect.height * 620);
+    if (selectedEndpoint && currentAnchorPoint && isOrthoLock) {
+      const dx = Math.abs(rawX - currentAnchorPoint.x);
+      const dy = Math.abs(rawY - currentAnchorPoint.y);
+      if (dx >= dy) {
+        setCursorPos({ x: rawX, y: currentAnchorPoint.y });
+      } else {
+        setCursorPos({ x: currentAnchorPoint.x, y: rawY });
+      }
     } else {
-      connectPatchCable(deviceId, portId);
+      setCursorPos({ x: rawX, y: rawY });
     }
   };
+  const handleCanvasClick = (e3) => {
+    if (!selectedEndpoint || !selectedTool || selectedTool === "unplug") return;
+    if (!cursorPos) return;
+    setDrawingWaypoints((prev) => [...prev, cursorPos]);
+  };
+  const handleEndpointClick = (endpoint) => {
+    if (selectedTool === "unplug") {
+      const connectedCable = roomCables.find(
+        (c2) => c2.from.type === endpoint.type && c2.from.deviceId === endpoint.deviceId && c2.from.portId === endpoint.portId || c2.to.type === endpoint.type && c2.to.deviceId === endpoint.deviceId && c2.to.portId === endpoint.portId
+      );
+      if (connectedCable) {
+        removeRoomCable(connectedCable.id);
+      }
+      return;
+    }
+    if (!selectedTool) return;
+    if (!selectedEndpoint) {
+      selectCableEndpoint(endpoint);
+      setDrawingWaypoints([]);
+    } else {
+      if (selectedEndpoint.type === endpoint.type && selectedEndpoint.portId === endpoint.portId) {
+        selectCableEndpoint(null);
+        setDrawingWaypoints([]);
+        return;
+      }
+      const pStart = getEndpointCoord(selectedEndpoint);
+      const pEnd = getEndpointCoord(endpoint);
+      let finalPoints;
+      if (drawingWaypoints.length > 0) {
+        finalPoints = [pStart, ...drawingWaypoints, pEnd];
+      } else {
+        finalPoints = generateDefaultOrthogonalPoints(pStart, pEnd, selectedTool);
+      }
+      if (redrawingCableId) {
+        updateRoomCablePoints(redrawingCableId, finalPoints);
+        setRedrawingCableId(null);
+      } else {
+        connectRoomCable(selectedEndpoint, endpoint, selectedTool, finalPoints);
+      }
+      setDrawingWaypoints([]);
+      selectCableEndpoint(null);
+    }
+  };
+  const handleStartRedrawCable = (cable) => {
+    setSelectedCableTool(cable.type);
+    selectCableEndpoint(cable.from);
+    setDrawingWaypoints([]);
+    setRedrawingCableId(cable.id);
+    setServerBuildingSubView("building_room");
+  };
+  const handleUndoWaypoint = () => {
+    setDrawingWaypoints((prev) => prev.slice(0, -1));
+  };
+  const handleCancelDrawing = () => {
+    selectCableEndpoint(null);
+    setDrawingWaypoints([]);
+    setRedrawingCableId(null);
+  };
+  reactExports.useEffect(() => {
+    const handleKeyDown = (e3) => {
+      if (e3.key === "Escape") {
+        handleCancelDrawing();
+      } else if (e3.key === "Backspace" && drawingWaypoints.length > 0) {
+        handleUndoWaypoint();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [drawingWaypoints]);
   const uSlots = Array.from({ length: 42 }, (_, i) => 42 - i);
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1 flex flex-col h-full bg-slate-950 p-6 overflow-hidden select-none font-sans", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between pb-4 border-b border-slate-800 shrink-0", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1 flex flex-col h-full bg-slate-950 p-5 overflow-hidden select-none font-sans text-slate-100", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between pb-3 border-b border-slate-800 shrink-0", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "text-lg font-bold text-slate-100 flex items-center gap-2.5", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Server, { className: "w-5 h-5 text-cyan-400" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "NOC Server Room & 42U Rackmount Simulator" })
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "text-lg font-bold text-slate-100 flex items-center gap-2", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Server, { className: "w-5 h-5 text-cyan-400" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "NOC Server Room & Manajemen Jalur Kabel Fisik" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "span",
+            {
+              className: `px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold flex items-center gap-1.5 border ${isFullPipelineOnline ? "bg-emerald-950/80 text-emerald-400 border-emerald-500/50 shadow-[0_0_12px_rgba(16,185,129,0.3)]" : "bg-rose-950/80 text-rose-400 border-rose-500/50 animate-pulse"}`,
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `w-2 h-2 rounded-full ${isFullPipelineOnline ? "bg-emerald-400 animate-pulse" : "bg-rose-500"}` }),
+                isFullPipelineOnline ? "PIPELINE FTTH ONLINE (1,000 Mbps)" : "PIPELINE KABEL BELUM LENGKAP"
+              ]
+            }
+          )
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-slate-400 mt-0.5", children: "Atur posisi perangkat, saklar daya listrik, dan patching kabel jumper fiber optik antar port secara fisik." })
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-xs text-slate-400 mt-0.5 flex items-center gap-2", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+            "Lokasi: ",
+            leasedBuilding ? leasedBuilding.name : "Gedung Server Belum Disewa"
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-slate-600", children: "•" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Gambar jalur kabel beraturan (siku 90° melalui tray & duct dinding) atau sambungkan port secara instan." })
+        ] })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 bg-slate-900 p-1 rounded-xl border border-slate-800 font-mono text-xs", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "button",
-          {
-            onClick: () => setServerRoomViewMode("2d"),
-            className: `px-3 py-1.5 rounded-lg font-bold transition-all ${serverRoomViewMode === "2d" ? "bg-cyan-600 text-white shadow-sm" : "text-slate-400 hover:text-slate-200"}`,
-            children: "2D Rack View"
-          }
-        ),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2.5", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center bg-slate-900 p-1 rounded-xl border border-slate-800 text-xs font-mono", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "button",
+            {
+              onClick: () => setServerBuildingSubView("building_room"),
+              className: `px-3 py-1.5 rounded-lg font-bold transition-all flex items-center gap-1.5 ${subView === "building_room" ? "bg-cyan-600 text-white shadow-sm" : "text-slate-400 hover:text-slate-200"}`,
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Box, { className: "w-3.5 h-3.5" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Denah Ruangan 2D" })
+              ]
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "button",
+            {
+              onClick: () => setServerBuildingSubView("rack_closeup"),
+              className: `px-3 py-1.5 rounded-lg font-bold transition-all flex items-center gap-1.5 ${subView === "rack_closeup" ? "bg-cyan-600 text-white shadow-sm" : "text-slate-400 hover:text-slate-200"}`,
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Server, { className: "w-3.5 h-3.5" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Detail Rak 42U" })
+              ]
+            }
+          )
+        ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative group", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs(
             "button",
             {
               disabled: true,
-              className: "px-3 py-1.5 rounded-lg text-slate-600 cursor-not-allowed bg-slate-950/60 border border-slate-800/50 flex items-center gap-1.5",
+              className: "px-3 py-1.5 rounded-xl text-slate-600 cursor-not-allowed bg-slate-900 border border-slate-800 flex items-center gap-1.5 text-xs font-mono",
               children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "3D Server Room" }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[9px] px-1 bg-amber-950/80 text-amber-400 rounded", children: "SOON" })
               ]
             }
           ),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "absolute right-0 top-full mt-2 hidden group-hover:block w-64 p-2.5 bg-slate-900 border border-amber-500/50 rounded-xl shadow-2xl text-[11px] text-amber-300 font-sans z-50 animate-fade-in", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-bold mb-0.5", children: "🚧 Fitur Sedang Dikembangkan" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: "Mode 3D Server Room interaktif sedang dalam proses pembuatan untuk pembaruan berikutnya." })
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "absolute right-0 top-full mt-2 hidden group-hover:block w-64 p-3 bg-slate-900 border border-amber-500/50 rounded-xl shadow-2xl text-[11px] text-amber-300 font-sans z-50 animate-fade-in pointer-events-none", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "font-bold flex items-center gap-1.5 mb-1 text-amber-200", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(TriangleAlert, { className: "w-3.5 h-3.5 text-amber-400" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Fitur Sedang Dikembangkan" })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: "Mode 3D Server Room interaktif sedang dalam proses pembuatan untuk pembaruan berikutnya (Coming Soon in 3D Update)." })
           ] })
         ] })
       ] })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1 flex gap-6 overflow-hidden pt-4", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1 bg-slate-900/90 border-2 border-slate-700 rounded-2xl p-4 overflow-y-auto flex flex-col items-center relative shadow-2xl", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full max-w-2xl bg-slate-950 border border-slate-800 rounded-xl p-2.5 mb-3 flex items-center justify-between text-xs font-mono text-slate-400", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold text-slate-200", children: "APC NetShelter SX 42U - Rack #01" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "flex items-center gap-2", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-2 h-2 rounded-full bg-emerald-400 animate-pulse" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "AC Daya: 220V 50Hz" })
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-3 bg-slate-900/90 border border-slate-800/80 rounded-xl px-4 py-2 flex items-center justify-between text-[11px] font-mono shrink-0 overflow-x-auto shadow-sm", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-slate-400 uppercase font-bold text-[10px]", children: "Alur Sinyal:" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `flex items-center gap-1 px-2 py-0.5 rounded border ${isMcbOn ? "bg-emerald-950/60 text-emerald-400 border-emerald-800/50" : "bg-rose-950/60 text-rose-400 border-rose-800/50"}`, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Zap, { className: "w-3 h-3" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+            "1. Listrik PLN ",
+            isMcbOn ? "220V" : "OFF"
           ] })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-full max-w-2xl bg-black/80 border-x-4 border-slate-700 rounded-b-xl flex flex-col relative p-2 shadow-inner", children: uSlots.map((u2) => {
-          const deviceAtSlot = serverRack.devices.find((d2) => d2.uSlot === u2);
-          const isCoveredByTaller = serverRack.devices.some(
-            (d2) => d2.uSlot < u2 && u2 < d2.uSlot + d2.uHeight
-          );
-          if (isCoveredByTaller) return null;
-          if (deviceAtSlot) {
-            const heightPx = deviceAtSlot.uHeight * 44;
-            return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-              "div",
-              {
-                style: { height: `${heightPx}px` },
-                className: `w-full rounded-lg border my-1 p-2 flex items-center justify-between transition-all select-none relative ${deviceAtSlot.isPowered ? "bg-slate-900/95 border-cyan-500/40 shadow-[0_0_15px_rgba(6,182,212,0.15)]" : "bg-slate-950/90 border-slate-800 opacity-60"}`,
-                children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-col items-center justify-center font-mono text-[9px] text-slate-500 w-6", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
-                      "U",
-                      u2
-                    ] }) }),
-                    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col", children: [
-                      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-mono text-[10px] uppercase font-bold text-cyan-400 bg-cyan-950/80 px-1.5 py-0.5 rounded", children: deviceAtSlot.brand }),
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs font-bold text-slate-100", children: deviceAtSlot.model })
-                      ] }),
-                      /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-[10px] text-slate-400 font-mono mt-0.5", children: [
-                        deviceAtSlot.maxThroughputMbps.toLocaleString(),
-                        " Mbps • ",
-                        deviceAtSlot.powerWatts,
-                        "W"
-                      ] })
-                    ] })
-                  ] }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center gap-1.5 bg-slate-950/80 p-1.5 rounded-lg border border-slate-800", children: deviceAtSlot.ports.map((port) => {
-                    const isPatchingThis = selectedPortForPatching?.deviceId === deviceAtSlot.id && selectedPortForPatching?.portId === port.id;
-                    const isConnected = serverRack.patchCables.some(
-                      (c2) => c2.fromDeviceId === deviceAtSlot.id && c2.fromPortId === port.id || c2.toDeviceId === deviceAtSlot.id && c2.toPortId === port.id
-                    );
-                    return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                      "button",
+        /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-3 h-3 text-slate-600 shrink-0" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `flex items-center gap-1 px-2 py-0.5 rounded border ${isModemPowered ? "bg-emerald-950/60 text-emerald-400 border-emerald-800/50" : "bg-rose-950/60 text-rose-400 border-rose-800/50"}`, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Power, { className: "w-3 h-3" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+            "2. Modem ISP ",
+            isModemPowered ? "ON" : "NO POWER"
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-3 h-3 text-slate-600 shrink-0" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `flex items-center gap-1 px-2 py-0.5 rounded border ${isModemConnectedToRouter ? "bg-emerald-950/60 text-emerald-400 border-emerald-800/50" : "bg-rose-950/60 text-rose-400 border-rose-800/50"}`, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Cable, { className: "w-3 h-3" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+            "3. Kabel LAN Cat6 ",
+            isModemConnectedToRouter ? "WAN LINK UP" : "UNLINKED"
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-3 h-3 text-slate-600 shrink-0" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `flex items-center gap-1 px-2 py-0.5 rounded border ${isRouterPowered ? "bg-emerald-950/60 text-emerald-400 border-emerald-800/50" : "bg-rose-950/60 text-rose-400 border-rose-800/50"}`, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Router, { className: "w-3 h-3" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+            "4. Core Router ",
+            isRouterPowered ? "ACTIVE" : "NO POWER"
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-3 h-3 text-slate-600 shrink-0" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `flex items-center gap-1 px-2 py-0.5 rounded border ${isRouterConnectedToOlt ? "bg-emerald-950/60 text-emerald-400 border-emerald-800/50" : "bg-rose-950/60 text-rose-400 border-rose-800/50"}`, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Share2, { className: "w-3 h-3" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+            "5. Fiber 10G ",
+            isRouterConnectedToOlt ? "LINK UP" : "UNLINKED"
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-3 h-3 text-slate-600 shrink-0" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `flex items-center gap-1 px-2 py-0.5 rounded border ${isOltPowered ? "bg-emerald-950/60 text-emerald-400 border-emerald-800/50" : "bg-rose-950/60 text-rose-400 border-rose-800/50"}`, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Cpu, { className: "w-3 h-3" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+            "6. GPON OLT ",
+            isOltPowered ? "ACTIVE" : "NO POWER"
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-3 h-3 text-slate-600 shrink-0" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `flex items-center gap-1 px-2 py-0.5 rounded border ${isOltConnectedToOdfWall ? "bg-emerald-950/60 text-emerald-400 border-emerald-800/50" : "bg-rose-950/60 text-rose-400 border-rose-800/50"}`, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Wifi, { className: "w-3 h-3" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+            "7. Feeder Kota ",
+            isOltConnectedToOdfWall ? "TX ON" : "NO LIGHT"
+          ] })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        "button",
+        {
+          onClick: () => setActiveTab("map"),
+          className: "text-xs text-cyan-400 hover:text-cyan-300 font-bold flex items-center gap-1 underline underline-offset-2 ml-4 shrink-0",
+          children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Peta Kota 2D" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-3 h-3" })
+          ]
+        }
+      )
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-3 bg-slate-900 border border-slate-800 rounded-xl p-2.5 flex items-center justify-between shrink-0 shadow-sm", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] font-bold text-slate-400 uppercase font-mono mr-1", children: "Alat Kabel:" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "button",
+          {
+            onClick: () => {
+              setSelectedCableTool(selectedTool === "power" ? null : "power");
+              setDrawingWaypoints([]);
+            },
+            className: `px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 border transition-all ${selectedTool === "power" ? "bg-emerald-600 text-white border-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.4)]" : "bg-slate-950 text-slate-300 border-slate-800 hover:border-slate-700"}`,
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(Zap, { className: "w-3.5 h-3.5 text-emerald-400" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Kabel Listrik AC" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-[10px] font-mono px-1.5 py-0.2 rounded bg-slate-800 text-slate-300", children: [
+                powerStock,
+                " pcs"
+              ] })
+            ]
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "button",
+          {
+            onClick: () => {
+              setSelectedCableTool(selectedTool === "lan" ? null : "lan");
+              setDrawingWaypoints([]);
+            },
+            className: `px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 border transition-all ${selectedTool === "lan" ? "bg-blue-600 text-white border-blue-400 shadow-[0_0_12px_rgba(59,130,246,0.4)]" : "bg-slate-950 text-slate-300 border-slate-800 hover:border-slate-700"}`,
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(Cable, { className: "w-3.5 h-3.5 text-blue-400" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Kabel LAN Cat6" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-[10px] font-mono px-1.5 py-0.2 rounded bg-slate-800 text-slate-300", children: [
+                lanStock,
+                " pcs"
+              ] })
+            ]
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "button",
+          {
+            onClick: () => {
+              setSelectedCableTool(selectedTool === "fiber" ? null : "fiber");
+              setDrawingWaypoints([]);
+            },
+            className: `px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 border transition-all ${selectedTool === "fiber" ? "bg-amber-600 text-white border-amber-400 shadow-[0_0_12px_rgba(245,158,11,0.4)]" : "bg-slate-950 text-slate-300 border-slate-800 hover:border-slate-700"}`,
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(Share2, { className: "w-3.5 h-3.5 text-amber-400" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Patchcord Fiber Optik" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-[10px] font-mono px-1.5 py-0.2 rounded bg-slate-800 text-slate-300", children: [
+                fiberStock,
+                " pcs"
+              ] })
+            ]
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "button",
+          {
+            onClick: () => {
+              setSelectedCableTool(selectedTool === "unplug" ? null : "unplug");
+              setDrawingWaypoints([]);
+            },
+            className: `px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 border transition-all ${selectedTool === "unplug" ? "bg-rose-600 text-white border-rose-400 shadow-[0_0_12px_rgba(244,63,94,0.4)]" : "bg-slate-950 text-slate-300 border-slate-800 hover:border-slate-700"}`,
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(Scissors, { className: "w-3.5 h-3.5 text-rose-400" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Cabut Kabel" })
+            ]
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-5 w-px bg-slate-800 mx-1" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "button",
+          {
+            onClick: () => setIsOrthoLock(!isOrthoLock),
+            title: "Kunci garis agar selalu siku 90 derajat (garis beraturan)",
+            className: `px-2.5 py-1.5 rounded-lg text-xs font-mono font-bold flex items-center gap-1.5 border transition-all ${isOrthoLock ? "bg-cyan-950 text-cyan-300 border-cyan-500/60 shadow-[0_0_10px_rgba(6,182,212,0.2)]" : "bg-slate-950 text-slate-500 border-slate-800"}`,
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(Compass, { className: "w-3.5 h-3.5 text-cyan-400" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+                "Siku 90°: ",
+                isOrthoLock ? "AKTIF" : "BEBAS"
+              ] })
+            ]
+          }
+        )
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs font-mono flex items-center gap-2", children: selectedEndpoint ? /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 bg-amber-950/90 border border-amber-500/60 text-amber-300 px-3 py-1 rounded-lg", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+          "Mulai: ",
+          /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { children: selectedEndpoint.label }),
+          drawingWaypoints.length > 0 && ` (${drawingWaypoints.length} titik belokan)`,
+          " ",
+          "$\\rightarrow$ Klik di ruangan untuk belokan, lalu klik Port Tujuan!"
+        ] }),
+        drawingWaypoints.length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "button",
+          {
+            onClick: handleUndoWaypoint,
+            title: "Hapus titik belokan terakhir (Backspace)",
+            className: "bg-amber-900/80 hover:bg-amber-800 text-white text-[10px] px-2 py-0.5 rounded flex items-center gap-1",
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(RotateCcw, { className: "w-3 h-3" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Undo Titik" })
+            ]
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "button",
+          {
+            onClick: handleCancelDrawing,
+            className: "text-[10px] bg-slate-800 hover:bg-slate-700 text-slate-300 px-2 py-0.5 rounded",
+            children: "Batal"
+          }
+        )
+      ] }) : selectedTool ? /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cyan-400", children: "Pilih Port Asal untuk mulai menggambar jalur kabel beraturan." }) : /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-slate-500", children: "Pilih jenis kabel di atas untuk menarik jalur kabel beraturan." }) })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1 flex gap-5 overflow-hidden mt-3", children: [
+      subView === "building_room" ? (
+        /* =========================================================
+           SUBVIEW 1: FULL 2D BUILDING & ROOM FLOORPLAN
+           ========================================================= */
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex-1 bg-slate-900 border border-slate-800 rounded-2xl relative overflow-hidden flex flex-col shadow-2xl", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "svg",
+          {
+            ref: svgRef,
+            onClick: handleCanvasClick,
+            onMouseMove: handleSvgMouseMove,
+            className: `w-full h-full select-none ${selectedEndpoint ? "cursor-crosshair" : selectedTool === "unplug" ? "cursor-pointer" : "cursor-default"}`,
+            viewBox: "0 0 1100 620",
+            preserveAspectRatio: "xMidYMid meet",
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("defs", { children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("pattern", { id: "raised-floor", width: "40", height: "40", patternUnits: "userSpaceOnUse", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M 40 0 L 0 0 0 40", fill: "none", stroke: "#1e293b", strokeWidth: "1" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "36", y: "36", width: "3", height: "3", fill: "#334155", opacity: "0.4" })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("pattern", { id: "cable-ladder", width: "20", height: "12", patternUnits: "userSpaceOnUse", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "0", y: "0", width: "20", height: "12", fill: "none", stroke: "#475569", strokeWidth: "1" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("line", { x1: "0", y1: "6", x2: "20", y2: "6", stroke: "#64748b", strokeWidth: "1.5" })
+                ] })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "20", y: "20", width: "1060", height: "580", fill: "#090d16" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "20", y: "20", width: "1060", height: "580", fill: "url(#raised-floor)", opacity: "0.75" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "20", y: "20", width: "1060", height: "580", fill: "none", stroke: "#334155", strokeWidth: "12", rx: "16" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "180", y: "70", width: "820", height: "24", fill: "url(#cable-ladder)", opacity: "0.8", rx: "4" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "590", y: "86", fill: "#94a3b8", fontSize: "10", fontFamily: "monospace", textAnchor: "middle", children: "TRAY KABEL GANTUNG (OVERHEAD CABLE LADDER)" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("g", { transform: "translate(60, 560)", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "0", y: "0", width: "100", height: "40", fill: "#1e293b", stroke: "#475569", strokeWidth: "2", rx: "4" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "50", y: "24", fill: "#94a3b8", fontSize: "9", fontFamily: "sans-serif", fontWeight: "bold", textAnchor: "middle", children: "PINTU AKSES NOC" })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("g", { transform: "translate(860, 32)", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "0", y: "0", width: "160", height: "42", fill: "#0f172a", stroke: "#38bdf8", strokeWidth: "1.5", rx: "6" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "18", cy: "21", r: "5", fill: "#38bdf8" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "32", y: "18", fill: "#e2e8f0", fontSize: "11", fontWeight: "bold", fontFamily: "sans-serif", children: "AC SERVER ROOM" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "32", y: "32", fill: "#38bdf8", fontSize: "10", fontFamily: "monospace", children: "19°C • FAN AUTO" })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("g", { transform: "translate(50, 45)", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "0", y: "0", width: "180", height: "140", fill: "#0f172a", stroke: "#475569", strokeWidth: "2", rx: "8" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "10", y: "10", width: "160", height: "24", fill: "#1e293b", rx: "4" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "90", y: "26", fill: "#e2e8f0", fontSize: "10", fontWeight: "bold", fontFamily: "monospace", textAnchor: "middle", children: "PANEL PLN 5500VA" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "20", y: "44", width: "70", height: "24", fill: "#020617", stroke: "#334155", rx: "4" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "text",
+                  {
+                    x: "55",
+                    y: "60",
+                    fill: isMcbOn ? "#10b981" : "#f43f5e",
+                    fontSize: "12",
+                    fontWeight: "bold",
+                    fontFamily: "monospace",
+                    textAnchor: "middle",
+                    children: isMcbOn ? "220 V" : "0 V"
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("g", { onClick: togglePlnMcb, className: "cursor-pointer", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "rect",
+                    {
+                      x: "105",
+                      y: "44",
+                      width: "55",
+                      height: "24",
+                      fill: isMcbOn ? "#065f46" : "#881337",
+                      stroke: isMcbOn ? "#10b981" : "#f43f5e",
+                      rx: "4"
+                    }
+                  ),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "text",
+                    {
+                      x: "132",
+                      y: "60",
+                      fill: "#ffffff",
+                      fontSize: "10",
+                      fontWeight: "bold",
+                      fontFamily: "monospace",
+                      textAnchor: "middle",
+                      children: isMcbOn ? "ON" : "OFF"
+                    }
+                  )
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "g",
+                  {
+                    onClick: () => handleEndpointClick({
+                      type: "pln_socket",
+                      portId: "socket-wall-desk",
+                      label: "Stop Kontak Meja (220V)"
+                    }),
+                    className: "cursor-pointer",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "rect",
+                        {
+                          x: "20",
+                          y: "80",
+                          width: "140",
+                          height: "24",
+                          fill: selectedEndpoint?.portId === "socket-wall-desk" ? "#f59e0b" : "#1e293b",
+                          stroke: selectedTool === "power" ? "#10b981" : "#475569",
+                          strokeWidth: selectedTool === "power" ? "2" : "1",
+                          rx: "4"
+                        }
+                      ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(Zap, { className: "w-3.5 h-3.5", x: "26", y: "85", fill: "#10b981" }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "46", y: "96", fill: "#cbd5e1", fontSize: "9", fontFamily: "sans-serif", children: "Stop Kontak Meja" }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "145", cy: "92", r: "4", fill: isMcbOn ? "#10b981" : "#64748b" })
+                    ]
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "g",
+                  {
+                    onClick: () => handleEndpointClick({
+                      type: "pln_socket",
+                      portId: "socket-wall-rack",
+                      label: "Stop Kontak Rak (220V)"
+                    }),
+                    className: "cursor-pointer",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "rect",
+                        {
+                          x: "20",
+                          y: "110",
+                          width: "140",
+                          height: "24",
+                          fill: selectedEndpoint?.portId === "socket-wall-rack" ? "#f59e0b" : "#1e293b",
+                          stroke: selectedTool === "power" ? "#10b981" : "#475569",
+                          strokeWidth: selectedTool === "power" ? "2" : "1",
+                          rx: "4"
+                        }
+                      ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(Zap, { className: "w-3.5 h-3.5", x: "26", y: "115", fill: "#10b981" }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "46", y: "126", fill: "#cbd5e1", fontSize: "9", fontFamily: "sans-serif", children: "Stop Kontak Rak" }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "145", cy: "122", r: "4", fill: isMcbOn ? "#10b981" : "#64748b" })
+                    ]
+                  }
+                )
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("g", { transform: "translate(60, 230)", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "0", y: "0", width: "340", height: "240", fill: "#0f172a", stroke: "#334155", strokeWidth: "2", rx: "10" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "10", y: "10", width: "320", height: "26", fill: "#1e293b", rx: "6" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "170", y: "27", fill: "#cbd5e1", fontSize: "11", fontWeight: "bold", fontFamily: "sans-serif", textAnchor: "middle", children: "MEJA OPERATOR & UPSTREAM ISP INDUK" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M -40 80 L 30 80", stroke: "#000000", strokeWidth: "3" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "30", cy: "80", r: "3", fill: "#f59e0b" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "-35", y: "72", fill: "#f59e0b", fontSize: "8", fontFamily: "monospace", children: "DROP FIBER ISP INDUK" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "30", y: "60", width: "280", height: "74", fill: "#ffffff", stroke: "#cbd5e1", strokeWidth: "2", rx: "8" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "30", y: "60", width: "280", height: "22", fill: "#f1f5f9", rx: "8" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "45", y: "75", fill: "#0284c7", fontSize: "10", fontWeight: "bold", fontFamily: "monospace", children: "ZTE" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "75", y: "75", fill: "#334155", fontSize: "9", fontWeight: "bold", fontFamily: "sans-serif", children: "ZXHN F609 GPON ONT (Provider Induk)" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "290", y: "75", fill: "#059669", fontSize: "8", fontFamily: "monospace", textAnchor: "end", children: "1000M PON" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("g", { transform: "translate(45, 88)", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "0", cy: "0", r: "3.5", fill: isModemPowered ? "#10b981" : "#64748b" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "8", y: "3", fill: "#64748b", fontSize: "8", fontFamily: "monospace", children: "PWR" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "45", cy: "0", r: "3.5", fill: isModemPowered ? "#10b981" : "#64748b" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "53", y: "3", fill: "#64748b", fontSize: "8", fontFamily: "monospace", children: "PON" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "90", cy: "0", r: "3.5", fill: isModemConnectedToRouter ? "#0ea5e9" : "#64748b" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "98", y: "3", fill: "#64748b", fontSize: "8", fontFamily: "monospace", children: "LAN1" })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "g",
+                  {
+                    onClick: () => handleEndpointClick({
+                      type: "upstream_modem",
+                      portId: "modem-pwr",
+                      label: "Modem ISP (DC 12V Power)"
+                    }),
+                    className: "cursor-pointer",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "rect",
+                        {
+                          x: "45",
+                          y: "102",
+                          width: "60",
+                          height: "20",
+                          fill: selectedEndpoint?.portId === "modem-pwr" ? "#f59e0b" : "#0f172a",
+                          stroke: selectedTool === "power" ? "#10b981" : "#64748b",
+                          strokeWidth: selectedTool === "power" ? "2" : "1",
+                          rx: "4"
+                        }
+                      ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "75", y: "115", fill: "#ffffff", fontSize: "8", fontFamily: "monospace", textAnchor: "middle", children: "DC 12V" })
+                    ]
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "g",
+                  {
+                    onClick: () => handleEndpointClick({
+                      type: "upstream_modem",
+                      portId: "modem-lan1",
+                      label: "Modem ISP (Port LAN 1 RJ45)"
+                    }),
+                    className: "cursor-pointer",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "rect",
+                        {
+                          x: "115",
+                          y: "102",
+                          width: "85",
+                          height: "20",
+                          fill: selectedEndpoint?.portId === "modem-lan1" ? "#f59e0b" : "#0f172a",
+                          stroke: selectedTool === "lan" ? "#3b82f6" : "#64748b",
+                          strokeWidth: selectedTool === "lan" ? "2" : "1",
+                          rx: "4"
+                        }
+                      ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "157", y: "115", fill: "#38bdf8", fontSize: "8", fontFamily: "monospace", textAnchor: "middle", children: "LAN 1 (GE)" })
+                    ]
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "g",
+                  {
+                    onClick: () => handleEndpointClick({
+                      type: "upstream_modem",
+                      portId: "modem-lan2",
+                      label: "Modem ISP (Port LAN 2 RJ45)"
+                    }),
+                    className: "cursor-pointer",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "rect",
+                        {
+                          x: "210",
+                          y: "102",
+                          width: "85",
+                          height: "20",
+                          fill: selectedEndpoint?.portId === "modem-lan2" ? "#f59e0b" : "#0f172a",
+                          stroke: selectedTool === "lan" ? "#3b82f6" : "#64748b",
+                          strokeWidth: selectedTool === "lan" ? "2" : "1",
+                          rx: "4"
+                        }
+                      ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "252", y: "115", fill: "#94a3b8", fontSize: "8", fontFamily: "monospace", textAnchor: "middle", children: "LAN 2 (GE)" })
+                    ]
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "30", y: "148", width: "280", height: "78", fill: "#020617", stroke: "#1e293b", strokeWidth: "2", rx: "6" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "30", y: "148", width: "280", height: "16", fill: "#0f172a", rx: "6" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "40", y: "159", fill: "#94a3b8", fontSize: "8", fontFamily: "monospace", children: "NOC Console Monitor (Telkom Upstream)" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("text", { x: "40", y: "178", fill: "#22c55e", fontSize: "9", fontFamily: "monospace", children: [
+                  "IP WAN: ",
+                  serverBuilding.upstreamModem.ipAddress
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("text", { x: "40", y: "193", fill: "#38bdf8", fontSize: "9", fontFamily: "monospace", children: [
+                  "GATEWAY: ",
+                  isModemConnectedToRouter ? "103.144.20.254 (0.9ms)" : "NO LINK"
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("text", { x: "40", y: "208", fill: isFullPipelineOnline ? "#10b981" : "#f59e0b", fontSize: "9", fontFamily: "monospace", children: [
+                  "STATUS: ",
+                  isFullPipelineOnline ? "ONLINE - ROUTING TRANSIT" : "STANDBY - CHECK CABLES"
+                ] })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("g", { transform: "translate(470, 110)", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "0", y: "0", width: "380", height: "425", fill: "#0b0f19", stroke: "#475569", strokeWidth: "4", rx: "12" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "10", y: "10", width: "360", height: "26", fill: "#1e293b", rx: "6" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("text", { x: "190", y: "27", fill: "#f1f5f9", fontSize: "11", fontWeight: "bold", fontFamily: "monospace", textAnchor: "middle", children: [
+                  "APC NetShelter SX 42U - RACK #01 (",
+                  serverRack.devices.length,
+                  " Perangkat)"
+                ] }),
+                Object.values(rackDeviceLayout).map(({ device: dev, relY, height: devHeight, ports }) => {
+                  const isPoweredAndMcb = dev.isPowered && isMcbOn;
+                  const borderColor = isPoweredAndMcb ? dev.type === "core_router" ? "#38bdf8" : dev.type === "gpon_olt" ? "#10b981" : dev.type === "ups_battery" ? "#34d399" : "#cbd5e1" : "#334155";
+                  return /* @__PURE__ */ jsxRuntimeExports.jsxs("g", { transform: `translate(20, ${relY})`, children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      "rect",
                       {
-                        onClick: () => handlePortClick(deviceAtSlot.id, port.id),
-                        title: `${port.name} (${port.type.toUpperCase()})`,
-                        className: `w-7 h-7 rounded flex flex-col items-center justify-center text-[8px] font-mono border transition-all ${isPatchingThis ? "bg-amber-400 border-amber-300 text-black font-bold animate-pulse" : isConnected ? "bg-cyan-950 border-cyan-400 text-cyan-300 shadow-[0_0_8px_#06b6d4]" : "bg-slate-900 border-slate-700 text-slate-400 hover:border-slate-500"}`,
+                        x: "0",
+                        y: "0",
+                        width: "340",
+                        height: devHeight,
+                        fill: "#0f172a",
+                        stroke: borderColor,
+                        strokeWidth: "1.5",
+                        rx: "6"
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "8", y: "7", width: "28", height: "15", fill: "#1e293b", rx: "3" }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                      "text",
+                      {
+                        x: "22",
+                        y: "18",
+                        fill: "#94a3b8",
+                        fontSize: "8",
+                        fontFamily: "monospace",
+                        textAnchor: "middle",
+                        fontWeight: "bold",
                         children: [
-                          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: port.name.slice(0, 3) }),
+                          "U",
+                          dev.uSlot
+                        ]
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                      "text",
+                      {
+                        x: "40",
+                        y: "18",
+                        fill: borderColor,
+                        fontSize: "9.5",
+                        fontWeight: "bold",
+                        fontFamily: "monospace",
+                        children: [
+                          dev.brand,
+                          " ",
+                          dev.model.length > 16 ? dev.model.slice(0, 15) + "…" : dev.model
+                        ]
+                      }
+                    ),
+                    devHeight >= 46 && /* @__PURE__ */ jsxRuntimeExports.jsxs("text", { x: "40", y: "32", fill: "#64748b", fontSize: "8", fontFamily: "monospace", children: [
+                      dev.maxThroughputMbps.toLocaleString(),
+                      " Mbps • ",
+                      dev.powerWatts,
+                      "W"
+                    ] }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      "circle",
+                      {
+                        cx: "14",
+                        cy: devHeight - 12,
+                        r: "3",
+                        fill: isPoweredAndMcb ? "#22c55e" : "#475569",
+                        className: isPoweredAndMcb ? "animate-pulse" : ""
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                      "g",
+                      {
+                        onClick: (e3) => {
+                          e3.stopPropagation();
+                          toggleDevicePower(dev.id);
+                        },
+                        className: "cursor-pointer",
+                        children: [
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("title", { children: "Nyalakan/Matikan Daya" }),
                           /* @__PURE__ */ jsxRuntimeExports.jsx(
-                            "span",
+                            "rect",
                             {
-                              className: `w-1.5 h-1.5 rounded-full mt-0.5 ${isConnected && deviceAtSlot.isPowered ? "bg-emerald-400 animate-pulse" : "bg-slate-700"}`
+                              x: "22",
+                              y: devHeight - 20,
+                              width: "18",
+                              height: "15",
+                              fill: dev.isPowered ? "#064e3b" : "#1e293b",
+                              stroke: dev.isPowered ? "#10b981" : "#475569",
+                              strokeWidth: "0.8",
+                              rx: "3"
+                            }
+                          ),
+                          /* @__PURE__ */ jsxRuntimeExports.jsx(
+                            "text",
+                            {
+                              x: "31",
+                              y: devHeight - 9,
+                              fill: dev.isPowered ? "#34d399" : "#94a3b8",
+                              fontSize: "7.5",
+                              fontWeight: "bold",
+                              textAnchor: "middle",
+                              children: "⚡"
                             }
                           )
                         ]
-                      },
-                      port.id
-                    );
-                  }) }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(
-                      "button",
-                      {
-                        onClick: () => toggleDevicePower(deviceAtSlot.id),
-                        title: deviceAtSlot.isPowered ? "Matikan Perangkat" : "Nyalakan Perangkat",
-                        className: `p-1.5 rounded-lg border transition-all ${deviceAtSlot.isPowered ? "bg-emerald-950 text-emerald-400 border-emerald-500/50 shadow-[0_0_10px_rgba(16,185,129,0.3)]" : "bg-slate-950 text-slate-500 border-slate-800"}`,
-                        children: /* @__PURE__ */ jsxRuntimeExports.jsx(Power, { className: "w-3.5 h-3.5" })
                       }
                     ),
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(
-                      "button",
+                    /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                      "g",
                       {
-                        onClick: () => unmountRackDevice(deviceAtSlot.id),
-                        title: "Bongkar dari rak",
-                        className: "p-1.5 rounded-lg text-slate-500 hover:text-rose-400 hover:bg-rose-950/40 transition-colors",
-                        children: /* @__PURE__ */ jsxRuntimeExports.jsx(Trash2, { className: "w-3.5 h-3.5" })
+                        onClick: (e3) => {
+                          e3.stopPropagation();
+                          unmountRackDevice(dev.id);
+                        },
+                        className: "cursor-pointer",
+                        children: [
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("title", { children: "Bongkar Perangkat dari Rak" }),
+                          /* @__PURE__ */ jsxRuntimeExports.jsx(
+                            "rect",
+                            {
+                              x: "44",
+                              y: devHeight - 20,
+                              width: "18",
+                              height: "15",
+                              fill: "#1e293b",
+                              stroke: "#475569",
+                              strokeWidth: "0.8",
+                              rx: "3"
+                            }
+                          ),
+                          /* @__PURE__ */ jsxRuntimeExports.jsx(
+                            "text",
+                            {
+                              x: "53",
+                              y: devHeight - 9,
+                              fill: "#f87171",
+                              fontSize: "8",
+                              fontWeight: "bold",
+                              textAnchor: "middle",
+                              children: "✕"
+                            }
+                          )
+                        ]
+                      }
+                    ),
+                    dev.ports.map((p2) => {
+                      const portInfo = ports[p2.id];
+                      if (!portInfo) return null;
+                      const isConnected = roomCables.some(
+                        (c2) => c2.from.deviceId === dev.id && c2.from.portId === p2.id || c2.to.deviceId === dev.id && c2.to.portId === p2.id
+                      );
+                      const isSelected = selectedEndpoint?.deviceId === dev.id && selectedEndpoint?.portId === p2.id;
+                      let strokeColor = "#64748b";
+                      let textColor = "#94a3b8";
+                      let portTypeBadge = p2.name.slice(0, 6);
+                      if (p2.type === "power_ac") {
+                        strokeColor = selectedTool === "power" ? "#10b981" : "#475569";
+                        textColor = "#10b981";
+                        portTypeBadge = p2.isInput ? "PWR IN" : "PWR OUT";
+                      } else if (p2.type === "copper_rj45") {
+                        strokeColor = selectedTool === "lan" ? "#3b82f6" : "#475569";
+                        textColor = "#38bdf8";
+                        portTypeBadge = p2.name.includes("WAN") ? "WAN" : "LAN";
+                      } else if (p2.type === "fiber_sfp" || p2.type === "fiber_pon" || p2.type === "fiber_sc") {
+                        strokeColor = selectedTool === "fiber" ? "#f59e0b" : "#475569";
+                        textColor = "#facc15";
+                        portTypeBadge = p2.name.includes("UPLINK") ? "UPLINK" : p2.name.includes("PON") ? p2.name.slice(0, 5) : p2.name.includes("Core") ? `SC ${p2.name.replace(/[^0-9]/g, "") || "1"}` : "OPTIC";
+                      }
+                      return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                        "g",
+                        {
+                          onClick: () => handleEndpointClick({
+                            type: "rack_device",
+                            deviceId: dev.id,
+                            portId: p2.id,
+                            label: `${dev.brand} ${dev.name} (${p2.name})`
+                          }),
+                          className: "cursor-pointer",
+                          children: [
+                            /* @__PURE__ */ jsxRuntimeExports.jsx(
+                              "rect",
+                              {
+                                x: portInfo.relX,
+                                y: portInfo.relY,
+                                width: portInfo.width,
+                                height: portInfo.height,
+                                fill: isSelected ? "#f59e0b" : isConnected ? "#091322" : "#020617",
+                                stroke: isSelected ? "#f59e0b" : isConnected ? textColor : strokeColor,
+                                strokeWidth: isSelected ? 2 : isConnected ? 1.5 : 1,
+                                rx: "3"
+                              }
+                            ),
+                            /* @__PURE__ */ jsxRuntimeExports.jsx(
+                              "text",
+                              {
+                                x: portInfo.relX + portInfo.width / 2,
+                                y: portInfo.relY + 14,
+                                fill: isSelected ? "#000000" : textColor,
+                                fontSize: "8",
+                                fontWeight: "bold",
+                                fontFamily: "monospace",
+                                textAnchor: "middle",
+                                children: portTypeBadge
+                              }
+                            ),
+                            isConnected && /* @__PURE__ */ jsxRuntimeExports.jsx(
+                              "circle",
+                              {
+                                cx: portInfo.relX + portInfo.width - 5,
+                                cy: portInfo.relY + 5,
+                                r: "2",
+                                fill: dev.isPowered && isMcbOn ? "#22c55e" : "#64748b",
+                                className: dev.isPowered && isMcbOn ? "animate-pulse" : ""
+                              }
+                            )
+                          ]
+                        },
+                        p2.id
+                      );
+                    })
+                  ] }, dev.id);
+                }),
+                (() => {
+                  const lowestMountedSlot = Object.values(rackDeviceLayout).reduce(
+                    (min2, d2) => Math.min(min2, d2.device.uSlot),
+                    42
+                  );
+                  const maxRackDevBottom = Math.max(
+                    290,
+                    ...Object.values(rackDeviceLayout).map((d2) => d2.relY + d2.height)
+                  );
+                  const emptyTop = maxRackDevBottom + 8;
+                  const emptyHeight = Math.max(65, 415 - emptyTop);
+                  return /* @__PURE__ */ jsxRuntimeExports.jsxs("g", { transform: `translate(20, ${emptyTop})`, children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      "rect",
+                      {
+                        x: "0",
+                        y: "0",
+                        width: "340",
+                        height: emptyHeight,
+                        fill: "#020617",
+                        stroke: "#1e293b",
+                        strokeDasharray: "4 4",
+                        rx: "8"
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                      "text",
+                      {
+                        x: "170",
+                        y: emptyHeight > 75 ? 26 : 20,
+                        fill: "#64748b",
+                        fontSize: "9.5",
+                        fontFamily: "sans-serif",
+                        textAnchor: "middle",
+                        children: [
+                          "SLOT RAK U1 S/D U",
+                          Math.max(1, lowestMountedSlot - 1),
+                          " TERSEDIA (",
+                          Math.max(1, lowestMountedSlot - 1),
+                          "U KOSONG)"
+                        ]
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                      "g",
+                      {
+                        onClick: () => setSelectedSlotForMounting(Math.max(1, lowestMountedSlot - 1)),
+                        className: "cursor-pointer",
+                        children: [
+                          /* @__PURE__ */ jsxRuntimeExports.jsx(
+                            "rect",
+                            {
+                              x: "25",
+                              y: emptyHeight > 75 ? 42 : 30,
+                              width: "140",
+                              height: "24",
+                              fill: "#064e3b",
+                              stroke: "#10b981",
+                              rx: "5"
+                            }
+                          ),
+                          /* @__PURE__ */ jsxRuntimeExports.jsx(
+                            "text",
+                            {
+                              x: "95",
+                              y: emptyHeight > 75 ? 57 : 45,
+                              fill: "#34d399",
+                              fontSize: "9",
+                              fontWeight: "bold",
+                              fontFamily: "monospace",
+                              textAnchor: "middle",
+                              children: "+ Pasang Dari Gudang"
+                            }
+                          )
+                        ]
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                      "g",
+                      {
+                        onClick: () => setServerBuildingSubView("rack_closeup"),
+                        className: "cursor-pointer",
+                        children: [
+                          /* @__PURE__ */ jsxRuntimeExports.jsx(
+                            "rect",
+                            {
+                              x: "175",
+                              y: emptyHeight > 75 ? 42 : 30,
+                              width: "140",
+                              height: "24",
+                              fill: "#1e293b",
+                              stroke: "#38bdf8",
+                              rx: "5"
+                            }
+                          ),
+                          /* @__PURE__ */ jsxRuntimeExports.jsx(
+                            "text",
+                            {
+                              x: "245",
+                              y: emptyHeight > 75 ? 57 : 45,
+                              fill: "#38bdf8",
+                              fontSize: "9",
+                              fontWeight: "bold",
+                              fontFamily: "monospace",
+                              textAnchor: "middle",
+                              children: "[ Detail Rak 42U ]"
+                            }
+                          )
+                        ]
                       }
                     )
+                  ] });
+                })()
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("g", { transform: "translate(900, 240)", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "0", y: "0", width: "150", height: "180", fill: "#0f172a", stroke: "#475569", strokeWidth: "2", rx: "8" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "8", y: "8", width: "134", height: "24", fill: "#1e293b", rx: "4" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "75", y: "24", fill: "#e2e8f0", fontSize: "9", fontWeight: "bold", fontFamily: "monospace", textAnchor: "middle", children: "ODF WALL PASSTHROUGH" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "g",
+                  {
+                    onClick: () => handleEndpointClick({
+                      type: "odf_wall",
+                      portId: "wall-feeder-1",
+                      label: "ODF Wall (Feeder Keluar ke Kota)"
+                    }),
+                    className: "cursor-pointer",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "rect",
+                        {
+                          x: "15",
+                          y: "45",
+                          width: "120",
+                          height: "26",
+                          fill: selectedEndpoint?.portId === "wall-feeder-1" ? "#f59e0b" : "#020617",
+                          stroke: selectedTool === "fiber" ? "#f59e0b" : "#334155",
+                          strokeWidth: selectedTool === "fiber" ? "2" : "1",
+                          rx: "4"
+                        }
+                      ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "75", y: "61", fill: "#facc15", fontSize: "9", fontFamily: "monospace", textAnchor: "middle", children: "CORE 1 (FEEDER OUT)" })
+                    ]
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "g",
+                  {
+                    onClick: () => handleEndpointClick({
+                      type: "odf_wall",
+                      portId: "wall-feeder-2",
+                      label: "ODF Wall (Core 2 Feeder)"
+                    }),
+                    className: "cursor-pointer",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "rect",
+                        {
+                          x: "15",
+                          y: "80",
+                          width: "120",
+                          height: "26",
+                          fill: selectedEndpoint?.portId === "wall-feeder-2" ? "#f59e0b" : "#020617",
+                          stroke: selectedTool === "fiber" ? "#f59e0b" : "#334155",
+                          strokeWidth: selectedTool === "fiber" ? "2" : "1",
+                          rx: "4"
+                        }
+                      ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "75", y: "96", fill: "#94a3b8", fontSize: "9", fontFamily: "monospace", textAnchor: "middle", children: "CORE 2 (BACKUP)" })
+                    ]
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M 135 58 L 180 58", stroke: "#f59e0b", strokeWidth: "4" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "75", y: "145", fill: "#38bdf8", fontSize: "8", fontFamily: "sans-serif", textAnchor: "middle", children: "Menuju Tiang & ODC" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("text", { x: "75", y: "160", fill: "#38bdf8", fontSize: "8", fontFamily: "sans-serif", textAnchor: "middle", children: "di Peta Kota 2D" })
+              ] }),
+              roomCables.map((cable) => {
+                const pStart = getEndpointCoord(cable.from);
+                const pEnd = getEndpointCoord(cable.to);
+                const points = cable.points && cable.points.length >= 2 ? cable.points : generateDefaultOrthogonalPoints(pStart, pEnd, cable.type);
+                const pathData = buildPathD(points);
+                return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "g",
+                  {
+                    onClick: () => {
+                      if (selectedTool === "unplug") {
+                        removeRoomCable(cable.id);
+                      }
+                    },
+                    className: selectedTool === "unplug" ? "cursor-pointer hover:opacity-60" : "",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "path",
+                        {
+                          d: pathData,
+                          fill: "none",
+                          stroke: cable.color,
+                          strokeWidth: cable.type === "power" ? "7" : cable.type === "lan" ? "6" : "5",
+                          strokeLinejoin: "round",
+                          strokeLinecap: "round",
+                          opacity: "0.25"
+                        }
+                      ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "path",
+                        {
+                          d: pathData,
+                          fill: "none",
+                          stroke: cable.color,
+                          strokeWidth: cable.type === "power" ? "3.5" : cable.type === "lan" ? "2.5" : "2",
+                          strokeLinejoin: "round",
+                          strokeLinecap: "round",
+                          strokeDasharray: cable.type === "fiber" ? "8 4" : "none"
+                        }
+                      ),
+                      points.map((pt, idx) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "circle",
+                        {
+                          cx: pt.x,
+                          cy: pt.y,
+                          r: idx === 0 || idx === points.length - 1 ? 3.5 : 2,
+                          fill: "#ffffff",
+                          opacity: idx === 0 || idx === points.length - 1 ? 0.9 : 0.6
+                        },
+                        `pt-${cable.id}-${idx}`
+                      ))
+                    ]
+                  },
+                  cable.id
+                );
+              }),
+              selectedEndpoint && currentAnchorPoint && cursorPos && /* @__PURE__ */ jsxRuntimeExports.jsxs("g", { children: [
+                drawingWaypoints.length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "path",
+                  {
+                    d: buildPathD([getEndpointCoord(selectedEndpoint), ...drawingWaypoints]),
+                    fill: "none",
+                    stroke: "#38bdf8",
+                    strokeWidth: "2.5",
+                    strokeLinejoin: "round",
+                    strokeLinecap: "round",
+                    strokeDasharray: "4 4"
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "line",
+                  {
+                    x1: currentAnchorPoint.x,
+                    y1: currentAnchorPoint.y,
+                    x2: cursorPos.x,
+                    y2: cursorPos.y,
+                    stroke: "#f59e0b",
+                    strokeWidth: "2.5",
+                    strokeDasharray: "4 4"
+                  }
+                ),
+                drawingWaypoints.map((pt, idx) => /* @__PURE__ */ jsxRuntimeExports.jsxs("g", { children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: pt.x, cy: pt.y, r: "5", fill: "#38bdf8" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: pt.x, cy: pt.y, r: "8", fill: "none", stroke: "#38bdf8", strokeWidth: "1", strokeDasharray: "2 2" })
+                ] }, `w-handle-${idx}`)),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: cursorPos.x, cy: cursorPos.y, r: "6", fill: "#f59e0b", opacity: "0.8" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: cursorPos.x, cy: cursorPos.y, r: "12", fill: "none", stroke: "#f59e0b", strokeWidth: "1.5", className: "animate-ping" })
+              ] })
+            ]
+          }
+        ) })
+      ) : (
+        /* =========================================================
+           SUBVIEW 2: 42U PHYSICAL SERVER RACK CLOSE-UP VIEW
+           ========================================================= */
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1 bg-slate-900/90 border-2 border-slate-700 rounded-2xl p-4 overflow-y-auto flex flex-col items-center relative shadow-2xl", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full max-w-2xl bg-slate-950 border border-slate-800 rounded-xl p-2.5 mb-3 flex items-center justify-between text-xs font-mono text-slate-400", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold text-slate-200", children: "APC NetShelter SX 42U - Rack #01" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "flex items-center gap-2", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `w-2 h-2 rounded-full ${isMcbOn ? "bg-emerald-400 animate-pulse" : "bg-rose-500"}` }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+                "PLN Tegangan: ",
+                isMcbOn ? "220V 50Hz" : "OFF (0V)"
+              ] })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-full max-w-2xl bg-black/80 border-x-4 border-slate-700 rounded-b-xl flex flex-col relative p-2 shadow-inner", children: uSlots.map((u2) => {
+            const deviceAtSlot = serverRack.devices.find((d2) => d2.uSlot === u2);
+            const isCoveredByTaller = serverRack.devices.some(
+              (d2) => d2.uSlot < u2 && u2 < d2.uSlot + d2.uHeight
+            );
+            if (isCoveredByTaller) return null;
+            if (deviceAtSlot) {
+              const heightPx = deviceAtSlot.uHeight * 46;
+              return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                "div",
+                {
+                  style: { height: `${heightPx}px` },
+                  className: `w-full rounded-lg border my-1 p-2 flex items-center justify-between transition-all select-none relative ${deviceAtSlot.isPowered && isMcbOn ? "bg-slate-900/95 border-cyan-500/40 shadow-[0_0_15px_rgba(6,182,212,0.15)]" : "bg-slate-950/90 border-slate-800 opacity-60"}`,
+                  children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-col items-center justify-center font-mono text-[9px] text-slate-500 w-6", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+                        "U",
+                        u2
+                      ] }) }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col", children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-mono text-[10px] uppercase font-bold text-cyan-400 bg-cyan-950/80 px-1.5 py-0.5 rounded", children: deviceAtSlot.brand }),
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs font-bold text-slate-100", children: deviceAtSlot.model })
+                        ] }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-[10px] text-slate-400 font-mono mt-0.5", children: [
+                          deviceAtSlot.maxThroughputMbps.toLocaleString(),
+                          " Mbps • ",
+                          deviceAtSlot.powerWatts,
+                          "W"
+                        ] })
+                      ] })
+                    ] }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center gap-1.5 bg-slate-950/80 p-1.5 rounded-lg border border-slate-800", children: deviceAtSlot.ports.map((port) => {
+                      const isConnected = roomCables.some(
+                        (c2) => c2.from.deviceId === deviceAtSlot.id && c2.from.portId === port.id || c2.to.deviceId === deviceAtSlot.id && c2.to.portId === port.id
+                      ) || serverRack.patchCables.some(
+                        (c2) => c2.fromDeviceId === deviceAtSlot.id && c2.fromPortId === port.id || c2.toDeviceId === deviceAtSlot.id && c2.toPortId === port.id
+                      );
+                      const isSelectedForRoomCable = selectedEndpoint?.deviceId === deviceAtSlot.id && selectedEndpoint?.portId === port.id;
+                      return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                        "button",
+                        {
+                          onClick: () => handleEndpointClick({
+                            type: "rack_device",
+                            deviceId: deviceAtSlot.id,
+                            portId: port.id,
+                            label: `${deviceAtSlot.name} (${port.name})`
+                          }),
+                          title: `${port.name} (${port.type.toUpperCase()})`,
+                          className: `w-8 h-8 rounded flex flex-col items-center justify-center text-[8px] font-mono border transition-all ${isSelectedForRoomCable ? "bg-amber-400 border-amber-300 text-black font-bold animate-pulse" : isConnected ? port.type === "power_ac" ? "bg-emerald-950 border-emerald-400 text-emerald-300" : port.type === "copper_rj45" ? "bg-blue-950 border-blue-400 text-blue-300" : "bg-amber-950 border-amber-400 text-amber-300 shadow-[0_0_8px_#f59e0b]" : "bg-slate-900 border-slate-700 text-slate-400 hover:border-slate-500"}`,
+                          children: [
+                            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: port.name.slice(0, 3) }),
+                            /* @__PURE__ */ jsxRuntimeExports.jsx(
+                              "span",
+                              {
+                                className: `w-1.5 h-1.5 rounded-full mt-0.5 ${isConnected && deviceAtSlot.isPowered && isMcbOn ? "bg-emerald-400 animate-pulse" : "bg-slate-700"}`
+                              }
+                            )
+                          ]
+                        },
+                        port.id
+                      );
+                    }) }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "button",
+                        {
+                          onClick: () => toggleDevicePower(deviceAtSlot.id),
+                          className: `p-1.5 rounded-lg border transition-all ${deviceAtSlot.isPowered ? "bg-emerald-950 text-emerald-400 border-emerald-500/50" : "bg-slate-950 text-slate-500 border-slate-800"}`,
+                          children: /* @__PURE__ */ jsxRuntimeExports.jsx(Power, { className: "w-3.5 h-3.5" })
+                        }
+                      ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "button",
+                        {
+                          onClick: () => unmountRackDevice(deviceAtSlot.id),
+                          className: "p-1.5 rounded-lg text-slate-500 hover:text-rose-400 hover:bg-slate-800 transition-all",
+                          children: /* @__PURE__ */ jsxRuntimeExports.jsx(Trash2, { className: "w-3.5 h-3.5" })
+                        }
+                      )
+                    ] })
+                  ]
+                },
+                `u-${u2}`
+              );
+            }
+            return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "div",
+              {
+                onClick: () => setSelectedSlotForMounting(u2),
+                className: "w-full h-8 border border-dashed border-slate-800 hover:border-cyan-500/60 rounded my-0.5 px-3 flex items-center justify-between text-[10px] font-mono text-slate-600 hover:text-cyan-400 hover:bg-cyan-950/20 cursor-pointer transition-colors",
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+                    "U",
+                    u2
+                  ] }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "flex items-center gap-1 opacity-0 hover:opacity-100", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(Plus, { className: "w-3 h-3" }),
+                    " Pasang Alat"
                   ] })
                 ]
               },
               `u-${u2}`
             );
-          }
-          return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            "div",
-            {
-              onClick: () => setSelectedSlotForMounting(u2),
-              className: "h-10 w-full border border-dashed border-slate-800/80 rounded my-0.5 flex items-center justify-between px-3 text-[10px] font-mono text-slate-600 hover:border-cyan-500/50 hover:bg-cyan-950/10 cursor-pointer transition-colors group",
-              children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "w-6", children: [
-                  "U",
-                  u2
-                ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "opacity-0 group-hover:opacity-100 text-cyan-400 flex items-center gap-1", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(Plus, { className: "w-3 h-3" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
-                    "Pasang Alat di U",
-                    u2
-                  ] })
-                ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-6 text-right", children: "--" })
-              ]
-            },
-            `u-${u2}`
-          );
-        }) })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-88 flex flex-col gap-4 overflow-y-auto shrink-0 select-none font-mono text-xs", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-sm", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center justify-between border-b border-slate-800 pb-2 mb-3", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "font-bold text-slate-100 flex items-center gap-2", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(Share2, { className: "w-4 h-4 text-cyan-400" }),
+          }) })
+        ] })
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-80 bg-slate-900 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between shrink-0 shadow-xl overflow-hidden", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col h-full overflow-hidden", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center justify-between pb-2 border-b border-slate-800 shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "text-xs font-bold text-slate-200 uppercase font-mono flex items-center gap-2", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Cable, { className: "w-4 h-4 text-cyan-400" }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
-              "Kabel Patch Fiber Optik (",
-              serverRack.patchCables.length,
+              "Koneksi Kabel Terpasang (",
+              roomCables.length,
               ")"
             ] })
           ] }) }),
-          selectedPortForPatching && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-amber-950/40 border border-amber-500/50 p-2.5 rounded-xl text-amber-300 text-xs mb-3 flex items-center gap-2 animate-pulse", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(CircleHelp, { className: "w-4 h-4 shrink-0" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Pilih port tujuan pada perangkat lain untuk menancapkan kabel jumper!" })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-2 max-h-48 overflow-y-auto pr-1", children: serverRack.patchCables.length === 0 ? /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-center py-6 text-slate-500 text-[11px]", children: "Belum ada kabel jumper. Klik 2 port pada alat di rak untuk menghubungkannya!" }) : serverRack.patchCables.map((cable) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex-1 overflow-y-auto space-y-2.5 mt-3 pr-1", children: roomCables.length === 0 ? /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-center py-10 text-slate-500 text-xs", children: "Belum ada kabel terhubung. Pilih alat kabel di atas untuk mulai menggambar jalur kabel." }) : roomCables.map((cable) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
             "div",
             {
-              className: "p-2 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between",
+              className: "p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-slate-700 flex flex-col justify-between transition-all",
               children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-[11px] text-slate-300", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-2.5 h-2.5 rounded-full bg-yellow-400 shadow-[0_0_6px_#facc15]" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Patch FO 10G" })
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between text-[11px] mb-1.5 font-mono", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "span",
+                    {
+                      className: `px-1.5 py-0.2 rounded font-bold uppercase text-[9px] ${cable.type === "power" ? "bg-emerald-950 text-emerald-300 border border-emerald-800/60" : cable.type === "lan" ? "bg-blue-950 text-blue-300 border border-blue-800/60" : "bg-amber-950 text-amber-300 border border-amber-800/60"}`,
+                      children: cable.type.toUpperCase()
+                    }
+                  ),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-1", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                      "button",
+                      {
+                        onClick: () => handleStartRedrawCable(cable),
+                        title: "Gambar Ulang Jalur Kabel Ini",
+                        className: "text-slate-400 hover:text-cyan-400 p-1 hover:bg-slate-800 rounded text-[10px] font-sans flex items-center gap-1",
+                        children: [
+                          /* @__PURE__ */ jsxRuntimeExports.jsx(CornerDownRight, { className: "w-3 h-3" }),
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Ubah Jalur" })
+                        ]
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      "button",
+                      {
+                        onClick: () => removeRoomCable(cable.id),
+                        className: "text-slate-500 hover:text-rose-400 p-1 hover:bg-slate-800 rounded",
+                        title: "Cabut Kabel",
+                        children: /* @__PURE__ */ jsxRuntimeExports.jsx(Trash2, { className: "w-3.5 h-3.5" })
+                      }
+                    )
+                  ] })
                 ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  "button",
-                  {
-                    onClick: () => removePatchCable(cable.id),
-                    className: "text-slate-500 hover:text-rose-400 p-1",
-                    title: "Cabut kabel",
-                    children: /* @__PURE__ */ jsxRuntimeExports.jsx(Trash2, { className: "w-3.5 h-3.5" })
-                  }
-                )
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs text-slate-200 font-semibold truncate leading-tight", children: cable.from.label }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-[10px] text-slate-400 flex items-center gap-1 my-0.5", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-3 h-3 text-cyan-400 shrink-0" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "truncate", children: cable.to.label })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-[9px] font-mono text-slate-500 mt-1 flex items-center justify-between border-t border-slate-900 pt-1", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+                    "Jalur: ",
+                    cable.points?.length ? `${cable.points.length} titik beraturan` : "Siku Otomatis"
+                  ] }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-emerald-400", children: "● Terkoneksi" })
+                ] })
               ]
             },
             cable.id
           )) })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-sm flex-1 flex flex-col", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center justify-between border-b border-slate-800 pb-2 mb-3", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "font-bold text-slate-100 flex items-center gap-2", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(Box, { className: "w-4 h-4 text-indigo-400" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Alat di Gudang (Siap Pasang)" })
-          ] }) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1 space-y-2.5 overflow-y-auto pr-1", children: [
-            mountableCatalog.map((item) => {
-              const stock = inventory[item.id] || 0;
-              if (stock <= 0) return null;
-              return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                "div",
-                {
-                  className: "p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-slate-700 transition-all flex items-center justify-between",
-                  children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-                      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "font-bold text-slate-200 text-xs", children: [
-                        item.brand,
-                        " ",
-                        item.model
-                      ] }),
-                      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-[10px] text-cyan-400 mt-0.5", children: [
-                        item.name,
-                        " (",
-                        item.rackHeightU,
-                        "U)"
-                      ] }),
-                      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-[10px] text-slate-500", children: [
-                        "Stok: ",
-                        stock,
-                        " unit"
-                      ] })
-                    ] }),
-                    /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                      "button",
-                      {
-                        onClick: () => {
-                          const targetU = selectedSlotForMounting || 1;
-                          mountRackDevice(item.id, targetU);
-                        },
-                        className: "px-2.5 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white text-[11px] font-semibold transition-colors",
-                        children: [
-                          "Pasang di U",
-                          selectedSlotForMounting || 1
-                        ]
-                      }
-                    )
-                  ]
+        selectedSlotForMounting && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-3 pt-3 border-t border-slate-800 shrink-0", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between mb-2", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-xs font-bold text-slate-200", children: [
+              "Pasang di Slot U",
+              selectedSlotForMounting,
+              ":"
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "button",
+              {
+                onClick: () => setSelectedSlotForMounting(null),
+                className: "text-xs text-slate-500 hover:text-slate-300",
+                children: "Batal"
+              }
+            )
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-1.5 max-h-36 overflow-y-auto", children: mountableCatalog.map((item) => {
+            const qty = inventory[item.id] || 0;
+            return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "button",
+              {
+                disabled: qty <= 0,
+                onClick: () => {
+                  mountRackDevice(item.id, selectedSlotForMounting);
+                  setSelectedSlotForMounting(null);
                 },
-                item.id
-              );
-            }),
-            mountableCatalog.every((item) => (inventory[item.id] || 0) === 0) && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-center py-10 text-slate-500 text-xs font-sans", children: "Tidak ada alat server di gudang. Beli Core Router, OLT, atau ODF dari menu Toko Hardware terlebih dahulu!" })
-          ] })
+                className: `w-full text-left p-2 rounded-lg text-xs flex items-center justify-between transition-all ${qty > 0 ? "bg-slate-950 hover:bg-slate-800 text-slate-200 border border-slate-800" : "bg-slate-950/40 text-slate-600 border border-transparent cursor-not-allowed"}`,
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "truncate", children: [
+                    item.name,
+                    " (",
+                    item.rackHeightU,
+                    "U)"
+                  ] }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "font-mono text-[10px] ml-2 text-cyan-400 font-bold shrink-0", children: [
+                    qty,
+                    " pcs"
+                  ] })
+                ]
+              },
+              item.id
+            );
+          }) })
         ] })
       ] })
     ] })

@@ -264,8 +264,9 @@ export interface GameState {
   setServerBuildingSubView: (view: 'building_room' | 'rack_closeup') => void
   setSelectedCableTool: (tool: RoomCableType | 'unplug' | null) => void
   selectCableEndpoint: (endpoint: RoomCableEndpoint | null) => void
-  connectRoomCable: (from: RoomCableEndpoint, to: RoomCableEndpoint, type: RoomCableType) => void
+  connectRoomCable: (from: RoomCableEndpoint, to: RoomCableEndpoint, type: RoomCableType, points?: { x: number; y: number }[]) => void
   removeRoomCable: (cableId: string) => void
+  updateRoomCablePoints: (cableId: string, points: { x: number; y: number }[]) => void
 
   // Server Rack Actions
   mountRackDevice: (templateId: string, uSlot: number) => void
@@ -422,6 +423,24 @@ export const INITIAL_STARTER_DEVICES: RackDevice[] = [
       { id: 'sc-1', name: 'ODF Core 1', type: 'fiber_sc', isInput: true },
       { id: 'sc-2', name: 'ODF Core 2', type: 'fiber_sc', isInput: true }
     ]
+  },
+  {
+    id: 'dev-ups-apc',
+    brand: 'APC by Schneider',
+    model: 'Smart-UPS RT 3000VA 2U',
+    name: 'UPS 3000VA On-Line (2U)',
+    type: 'ups_battery',
+    uSlot: 32,
+    uHeight: 2,
+    maxThroughputMbps: 10000,
+    powerWatts: 30,
+    isPowered: true,
+    healthPct: 100,
+    ports: [
+      { id: 'pwr-in', name: 'AC IN', type: 'power_ac', isInput: true },
+      { id: 'out-1', name: 'OUT 1', type: 'power_ac', isInput: false },
+      { id: 'out-2', name: 'OUT 2', type: 'power_ac', isInput: false }
+    ]
   }
 ]
 
@@ -472,7 +491,13 @@ export const INITIAL_SERVER_BUILDING = {
       from: { type: 'pln_socket' as const, portId: 'socket-wall-desk', label: 'Stop Kontak Meja' },
       to: { type: 'upstream_modem' as const, portId: 'modem-pwr', label: 'Modem ISP (DC 12V)' },
       color: '#10b981',
-      isActive: true
+      isActive: true,
+      points: [
+        { x: 190, y: 137 },
+        { x: 100, y: 137 },
+        { x: 100, y: 342 },
+        { x: 135, y: 342 }
+      ]
     },
     {
       id: 'cable-pwr-router',
@@ -480,7 +505,14 @@ export const INITIAL_SERVER_BUILDING = {
       from: { type: 'pln_socket' as const, portId: 'socket-wall-rack', label: 'Stop Kontak Rak' },
       to: { type: 'rack_device' as const, deviceId: 'dev-router-mikrotik', portId: 'pwr-1', label: 'MikroTik CCR2004 (PWR)' },
       color: '#10b981',
-      isActive: true
+      isActive: true,
+      points: [
+        { x: 190, y: 167 },
+        { x: 420, y: 167 },
+        { x: 420, y: 110 },
+        { x: 632, y: 110 },
+        { x: 632, y: 221 }
+      ]
     },
     {
       id: 'cable-pwr-olt',
@@ -488,7 +520,15 @@ export const INITIAL_SERVER_BUILDING = {
       from: { type: 'pln_socket' as const, portId: 'socket-wall-rack', label: 'Stop Kontak Rak' },
       to: { type: 'rack_device' as const, deviceId: 'dev-olt-zte', portId: 'pwr-1', label: 'ZTE C320 OLT (PWR)' },
       color: '#10b981',
-      isActive: true
+      isActive: true,
+      points: [
+        { x: 190, y: 167 },
+        { x: 440, y: 167 },
+        { x: 440, y: 110 },
+        { x: 620, y: 110 },
+        { x: 620, y: 303 },
+        { x: 632, y: 303 }
+      ]
     },
     {
       id: 'cable-lan-modem-router',
@@ -496,7 +536,15 @@ export const INITIAL_SERVER_BUILDING = {
       from: { type: 'upstream_modem' as const, portId: 'modem-lan1', label: 'Modem ISP (LAN 1)' },
       to: { type: 'rack_device' as const, deviceId: 'dev-router-mikrotik', portId: 'wan-1', label: 'Core Router (WAN)' },
       color: '#3b82f6',
-      isActive: true
+      isActive: true,
+      points: [
+        { x: 202, y: 342 },
+        { x: 202, y: 250 },
+        { x: 230, y: 250 },
+        { x: 230, y: 82 },
+        { x: 695, y: 82 },
+        { x: 695, y: 221 }
+      ]
     },
     {
       id: 'cable-fiber-router-olt',
@@ -504,7 +552,13 @@ export const INITIAL_SERVER_BUILDING = {
       from: { type: 'rack_device' as const, deviceId: 'dev-router-mikrotik', portId: 'sfp-1', label: 'Core Router (SFP+)' },
       to: { type: 'rack_device' as const, deviceId: 'dev-olt-zte', portId: 'uplink-1', label: 'ZTE OLT (Uplink)' },
       color: '#f59e0b',
-      isActive: true
+      isActive: true,
+      points: [
+        { x: 765, y: 221 },
+        { x: 800, y: 221 },
+        { x: 800, y: 303 },
+        { x: 695, y: 303 }
+      ]
     },
     {
       id: 'cable-fiber-olt-odf',
@@ -512,7 +566,29 @@ export const INITIAL_SERVER_BUILDING = {
       from: { type: 'rack_device' as const, deviceId: 'dev-olt-zte', portId: 'pon-1', label: 'ZTE OLT (PON 1)' },
       to: { type: 'odf_wall' as const, portId: 'wall-feeder-1', label: 'ODF Wall (Feeder Out)' },
       color: '#eab308',
-      isActive: true
+      isActive: true,
+      points: [
+        { x: 765, y: 303 },
+        { x: 830, y: 303 },
+        { x: 830, y: 298 },
+        { x: 915, y: 298 }
+      ]
+    },
+    {
+      id: 'cable-pwr-ups',
+      type: 'power' as const,
+      from: { type: 'pln_socket' as const, portId: 'socket-wall-rack', label: 'Stop Kontak Rak' },
+      to: { type: 'rack_device' as const, deviceId: 'dev-ups-apc', portId: 'pwr-in', label: 'APC Smart-UPS (AC IN)' },
+      color: '#10b981',
+      isActive: true,
+      points: [
+        { x: 190, y: 167 },
+        { x: 450, y: 167 },
+        { x: 450, y: 110 },
+        { x: 610, y: 110 },
+        { x: 610, y: 375 },
+        { x: 632, y: 375 }
+      ]
     }
   ],
   selectedCableTool: null as RoomCableType | 'unplug' | null,
@@ -1077,7 +1153,7 @@ export const useGameStore = create<GameState>((set, get) => ({
     }))
   },
 
-  connectRoomCable: (from, to, type) => {
+  connectRoomCable: (from, to, type, points) => {
     const state = get()
     if (from.type === to.type && from.deviceId === to.deviceId && from.portId === to.portId) {
       return
@@ -1104,7 +1180,8 @@ export const useGameStore = create<GameState>((set, get) => ({
       from,
       to,
       color,
-      isActive: true
+      isActive: true,
+      points
     }
 
     sound.playConnect()
@@ -1120,6 +1197,18 @@ export const useGameStore = create<GameState>((set, get) => ({
       }
     })
     state.addAlert(`Menghubungkan kabel ${type.toUpperCase()} dari ${from.label} ke ${to.label}!`, 'success')
+  },
+
+  updateRoomCablePoints: (cableId, points) => {
+    sound.playClick()
+    set((state) => ({
+      serverBuilding: {
+        ...state.serverBuilding,
+        roomCables: state.serverBuilding.roomCables.map((c) =>
+          c.id === cableId ? { ...c, points } : c
+        )
+      }
+    }))
   },
 
   removeRoomCable: (cableId) => {

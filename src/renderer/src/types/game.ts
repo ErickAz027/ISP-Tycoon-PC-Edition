@@ -133,6 +133,7 @@ export interface RoomCable {
   to: RoomCableEndpoint
   color: string
   isActive: boolean
+  points?: { x: number; y: number }[] // Ordered path of waypoints for neat structured lines
 }
 
 export interface UpstreamModemDevice {
